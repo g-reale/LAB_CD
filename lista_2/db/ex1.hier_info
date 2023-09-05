@@ -1,0 +1,81 @@
+|ex1
+S0[0] <= circuito_base:inst.S3
+S0[1] <= circuito_base:inst1.S3
+S0[2] <= circuito_base:inst2.S3
+X[0] => circuito_base:inst.X
+X[1] => circuito_base:inst1.X
+X[2] => circuito_base:inst2.X
+Y[0] => circuito_base:inst.Y
+Y[1] => circuito_base:inst1.Y
+Y[2] => circuito_base:inst2.Y
+S1[0] <= circuito_base:inst.S4
+S1[1] <= circuito_base:inst1.S4
+S1[2] <= circuito_base:inst2.S4
+S2[0] <= circuito_base:inst.S5
+S2[1] <= circuito_base:inst1.S5
+S2[2] <= circuito_base:inst2.S5
+S3[0] <= circuito_base:inst.S6
+S3[1] <= circuito_base:inst1.S6
+S3[2] <= circuito_base:inst2.S6
+S4[0] <= circuito_base:inst.S0
+S4[1] <= circuito_base:inst1.S0
+S4[2] <= circuito_base:inst2.S0
+S5[0] <= circuito_base:inst.S1
+S5[1] <= circuito_base:inst1.S1
+S5[2] <= circuito_base:inst2.S1
+S6[0] <= circuito_base:inst.S2
+S6[1] <= circuito_base:inst1.S2
+S6[2] <= circuito_base:inst2.S2
+
+
+|ex1|circuito_base:inst
+S0 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+Y => inst.IN0
+Y => inst7.IN0
+Y => inst10.IN0
+X => inst1.IN0
+X => inst4.IN1
+X => inst10.IN1
+X => inst11.IN1
+S1 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+S2 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+S3 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+S4 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+S5 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+S6 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex1|circuito_base:inst1
+S0 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+Y => inst.IN0
+Y => inst7.IN0
+Y => inst10.IN0
+X => inst1.IN0
+X => inst4.IN1
+X => inst10.IN1
+X => inst11.IN1
+S1 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+S2 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+S3 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+S4 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+S5 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+S6 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex1|circuito_base:inst2
+S0 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+Y => inst.IN0
+Y => inst7.IN0
+Y => inst10.IN0
+X => inst1.IN0
+X => inst4.IN1
+X => inst10.IN1
+X => inst11.IN1
+S1 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+S2 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+S3 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+S4 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+S5 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+S6 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+
+
