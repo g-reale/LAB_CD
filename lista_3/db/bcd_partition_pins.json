@@ -4,47 +4,47 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "pin_name5",
+					"name" : "a",
 					"strict" : false
 				},
 				{
-					"name" : "pin_name6",
+					"name" : "b",
 					"strict" : false
 				},
 				{
-					"name" : "pin_name7",
+					"name" : "c",
 					"strict" : false
 				},
 				{
-					"name" : "pin_name8",
+					"name" : "d",
 					"strict" : false
 				},
 				{
-					"name" : "pin_name9",
+					"name" : "e",
 					"strict" : false
 				},
 				{
-					"name" : "pin_name10",
+					"name" : "f",
 					"strict" : false
 				},
 				{
-					"name" : "pin_name11",
+					"name" : "g",
 					"strict" : false
 				},
 				{
-					"name" : "pin_name1",
+					"name" : "W",
 					"strict" : false
 				},
 				{
-					"name" : "pin_name3",
+					"name" : "Z",
 					"strict" : false
 				},
 				{
-					"name" : "pin_name2",
+					"name" : "Y",
 					"strict" : false
 				},
 				{
-					"name" : "pin_name4",
+					"name" : "X",
 					"strict" : false
 				}
 			]
