@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Sep 21 21:01:24 2023
+Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Revision Name : bcd
+Top-level Entity Name : bcd
+Family : Cyclone IV E
+Total logic elements : 576
+    Total combinational functions : 451
+    Dedicated logic registers : 398
+Total registers : 398
+Total pins : 11
+Total virtual pins : 0
+Total memory bits : 128
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
