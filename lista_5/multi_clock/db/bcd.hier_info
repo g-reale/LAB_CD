@@ -1,7 +1,7 @@
 |bcd
 a <= box:inst8.h
-sw_17 => mux:inst2.adr_MSB
-sw_16 => mux:inst2.adr_LSB
+sw_17 => my_mux:inst2.adr_MSB
+sw_16 => my_mux:inst2.adr_LSB
 clk => clk_trimmer:inst1.fast_clock
 clr => counter:inst.counter_clr
 b <= box:inst8.i
@@ -10,7 +10,6 @@ d <= box:inst8.k
 e <= box:inst8.l
 f <= box:inst8.m
 g <= box:inst8.n
-o <= counter:inst.LSB
 
 
 |bcd|box:inst8
@@ -55,13 +54,13 @@ n <= inst39.DB_MAX_OUTPUT_PORT_TYPE
 LSB <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 counter_clr => inst7.IN0
 counter_clk => inst3.CLK
-counter_clk => inst.CLK
 B <= inst5.DB_MAX_OUTPUT_PORT_TYPE
-counter_dir => inst.DATAIN
+counter_dir => inst1.IN0
+counter_dir => inst2.IN0
 MSB <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|bcd|mux:inst2
+|bcd|my_mux:inst2
 mux_o <= inst7.DB_MAX_OUTPUT_PORT_TYPE
 adr_MSB => inst.IN0
 adr_MSB => inst5.IN0
@@ -77,10 +76,12 @@ i_1 => inst4.IN2
 
 |bcd|clk_trimmer:inst1
 half <= simpleT:inst41.simple_Q
-fast_clock => simpleT:inst1.simple_clk
+fast_clock => simpleT:inst50.simple_clk
+fast_clock => inst.CLK
+fast_clock => inst25.CLK
 one <= simpleT:inst43.simple_Q
 two <= simpleT:inst44.simple_Q
-sx <= simpleT:inst47.simple_Q
+sx <= simpleT:inst54.simple_Q
 
 
 |bcd|clk_trimmer:inst1|simpleT:inst41
@@ -233,6 +234,12 @@ simple_clr => inst3.IN0
 simple_clk => inst.CLK
 
 
+|bcd|clk_trimmer:inst1|simpleT:inst50
+simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+simple_clr => inst3.IN0
+simple_clk => inst.CLK
+
+
 |bcd|clk_trimmer:inst1|simpleT:inst43
 simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
 simple_clr => inst3.IN0
@@ -240,6 +247,12 @@ simple_clk => inst.CLK
 
 
 |bcd|clk_trimmer:inst1|simpleT:inst44
+simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+simple_clr => inst3.IN0
+simple_clk => inst.CLK
+
+
+|bcd|clk_trimmer:inst1|simpleT:inst54
 simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
 simple_clr => inst3.IN0
 simple_clk => inst.CLK

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for bcd
-Thu Sep 21 21:01:24 2023
+Thu Sep 28 15:23:59 2023
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -15,16 +15,15 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Source assignments for sld_signaltap:auto_signaltap_0
- 14. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
- 15. Signal Tap Logic Analyzer Settings
- 16. Post-Synthesis Netlist Statistics for Top Partition
- 17. Elapsed Time Per Partition
- 18. Connections to In-System Debugging Instance "auto_signaltap_0"
- 19. Analysis & Synthesis Messages
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Source assignments for sld_signaltap:auto_signaltap_0
+ 13. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
+ 14. Signal Tap Logic Analyzer Settings
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Connections to In-System Debugging Instance "auto_signaltap_0"
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -51,16 +50,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Sep 21 21:01:24 2023       ;
+; Analysis & Synthesis Status        ; Successful - Thu Sep 28 15:23:59 2023       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; bcd                                         ;
 ; Top-level Entity Name              ; bcd                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 576                                         ;
-;     Total combinational functions  ; 451                                         ;
-;     Dedicated logic registers      ; 398                                         ;
-; Total registers                    ; 398                                         ;
-; Total pins                         ; 11                                          ;
+; Total logic elements               ; 578                                         ;
+;     Total combinational functions  ; 453                                         ;
+;     Dedicated logic registers      ; 400                                         ;
+; Total registers                    ; 400                                         ;
+; Total pins                         ; 10                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 128                                         ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -162,13 +161,13 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.02        ;
+; Average used               ; 1.00        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
-;     Processors 3-12        ;   0.1%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -244,30 +243,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 576                      ;
+; Estimated Total logic elements              ; 578                      ;
 ;                                             ;                          ;
-; Total combinational functions               ; 451                      ;
+; Total combinational functions               ; 453                      ;
 ; Logic element usage by number of LUT inputs ;                          ;
 ;     -- 4 input functions                    ; 173                      ;
 ;     -- 3 input functions                    ; 124                      ;
-;     -- <=2 input functions                  ; 154                      ;
+;     -- <=2 input functions                  ; 156                      ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 382                      ;
+;     -- normal mode                          ; 384                      ;
 ;     -- arithmetic mode                      ; 69                       ;
 ;                                             ;                          ;
-; Total registers                             ; 398                      ;
-;     -- Dedicated logic registers            ; 398                      ;
+; Total registers                             ; 400                      ;
+;     -- Dedicated logic registers            ; 400                      ;
 ;     -- I/O registers                        ; 0                        ;
 ;                                             ;                          ;
-; I/O pins                                    ; 11                       ;
+; I/O pins                                    ; 10                       ;
 ; Total memory bits                           ; 128                      ;
 ;                                             ;                          ;
 ; Embedded Multiplier 9-bit elements          ; 0                        ;
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 286                      ;
-; Total fan-out                               ; 2719                     ;
+; Total fan-out                               ; 2725                     ;
 ; Average fan-out                             ; 3.09                     ;
 +---------------------------------------------+--------------------------+
 
@@ -277,9 +276,9 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                             ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |bcd                                                                                                                                    ; 451 (1)             ; 398 (0)                   ; 128         ; 0            ; 0       ; 0         ; 11   ; 0            ; |bcd                                                                                                                                                                                                                                                                                                                                            ; bcd                               ; work         ;
+; |bcd                                                                                                                                    ; 453 (1)             ; 400 (0)                   ; 128         ; 0            ; 0       ; 0         ; 10   ; 0            ; |bcd                                                                                                                                                                                                                                                                                                                                            ; bcd                               ; work         ;
 ;    |box:inst8|                                                                                                                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|box:inst8                                                                                                                                                                                                                                                                                                                                  ; box                               ; work         ;
-;    |clk_trimmer:inst2|                                                                                                                  ; 34 (8)              ; 26 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst2                                                                                                                                                                                                                                                                                                                          ; clk_trimmer                       ; work         ;
+;    |clk_trimmer:inst2|                                                                                                                  ; 36 (9)              ; 28 (1)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst2                                                                                                                                                                                                                                                                                                                          ; clk_trimmer                       ; work         ;
 ;       |simpleT:inst10|                                                                                                                  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst2|simpleT:inst10                                                                                                                                                                                                                                                                                                           ; simpleT                           ; work         ;
 ;       |simpleT:inst11|                                                                                                                  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst2|simpleT:inst11                                                                                                                                                                                                                                                                                                           ; simpleT                           ; work         ;
 ;       |simpleT:inst12|                                                                                                                  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst2|simpleT:inst12                                                                                                                                                                                                                                                                                                           ; simpleT                           ; work         ;
@@ -299,6 +298,7 @@ https://fpgasoftware.intel.com/eula.
 ;       |simpleT:inst2|                                                                                                                   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst2|simpleT:inst2                                                                                                                                                                                                                                                                                                            ; simpleT                           ; work         ;
 ;       |simpleT:inst3|                                                                                                                   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst2|simpleT:inst3                                                                                                                                                                                                                                                                                                            ; simpleT                           ; work         ;
 ;       |simpleT:inst41|                                                                                                                  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst2|simpleT:inst41                                                                                                                                                                                                                                                                                                           ; simpleT                           ; work         ;
+;       |simpleT:inst46|                                                                                                                  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst2|simpleT:inst46                                                                                                                                                                                                                                                                                                           ; simpleT                           ; work         ;
 ;       |simpleT:inst4|                                                                                                                   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst2|simpleT:inst4                                                                                                                                                                                                                                                                                                            ; simpleT                           ; work         ;
 ;       |simpleT:inst5|                                                                                                                   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst2|simpleT:inst5                                                                                                                                                                                                                                                                                                            ; simpleT                           ; work         ;
 ;       |simpleT:inst6|                                                                                                                   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst2|simpleT:inst6                                                                                                                                                                                                                                                                                                            ; simpleT                           ; work         ;
@@ -374,25 +374,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; counter:inst|inst                     ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 1 ;                                        ;
-+---------------------------------------+----------------------------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 398   ;
+; Total registers                              ; 400   ;
 ; Number of registers using Synchronous Clear  ; 48    ;
 ; Number of registers using Synchronous Load   ; 58    ;
-; Number of registers using Asynchronous Clear ; 160   ;
+; Number of registers using Asynchronous Clear ; 161   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 262   ;
 ; Number of registers using Preset             ; 0     ;
@@ -507,18 +497,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 10                          ;
-; cycloneiii_ff         ; 29                          ;
-;     CLR               ; 28                          ;
-;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 51                          ;
-;     normal            ; 51                          ;
-;         1 data inputs ; 36                          ;
+; boundary_port         ; 9                           ;
+; cycloneiii_ff         ; 31                          ;
+;     CLR               ; 29                          ;
+;     plain             ; 2                           ;
+; cycloneiii_lcell_comb ; 53                          ;
+;     normal            ; 53                          ;
+;         1 data inputs ; 37                          ;
+;         2 data inputs ; 1                           ;
 ;         3 data inputs ; 7                           ;
 ;         4 data inputs ; 8                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.84                        ;
+; Average LUT depth     ; 1.83                        ;
 +-----------------------+-----------------------------+
 
 
@@ -580,7 +571,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Thu Sep 21 21:01:07 2023
+    Info: Processing started: Thu Sep 28 15:23:43 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off bcd -c bcd
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -619,7 +610,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_ngc File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_5/clock/db/cmpr_ngc.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2023.09.21.21:01:17 Progress: Loading slddf4920d8/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2023.09.28.15:23:53 Progress: Loading slddf4920d8/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -646,15 +637,15 @@ Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Critical Warning (35025): Partially connected in-system debug instance "auto_signaltap_0" to 33 of its 35 required data inputs, trigger inputs, acquisition clocks, and dynamic pins.  There were 0 illegal, 0 inaccessible, and 2 missing sources or connections.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 607 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 609 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 590 logic cells
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 593 logic cells
     Info (21064): Implemented 1 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 1063 megabytes
-    Info: Processing ended: Thu Sep 21 21:01:24 2023
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:37
+    Info: Peak virtual memory: 1060 megabytes
+    Info: Processing ended: Thu Sep 28 15:23:59 2023
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:32
 
 

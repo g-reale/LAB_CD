@@ -32,10 +32,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "o",
-					"strict" : false
-				},
-				{
 					"name" : "clr",
 					"strict" : false
 				},

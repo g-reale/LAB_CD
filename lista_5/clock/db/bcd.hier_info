@@ -8,7 +8,6 @@ d <= box:inst8.k
 e <= box:inst8.l
 f <= box:inst8.m
 g <= box:inst8.n
-o <= counter:inst.LSB
 
 
 |bcd|box:inst8
@@ -53,15 +52,16 @@ n <= inst39.DB_MAX_OUTPUT_PORT_TYPE
 LSB <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 counter_clr => inst7.IN0
 counter_clk => inst3.CLK
-counter_clk => inst.CLK
 B <= inst5.DB_MAX_OUTPUT_PORT_TYPE
-counter_dir => inst.DATAIN
+counter_dir => inst1.IN0
+counter_dir => inst2.IN0
 MSB <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |bcd|clk_trimmer:inst2
 slow_clock <= simpleT:inst41.simple_Q
-fast_clock => simpleT:inst.simple_clk
+fast_clock => simpleT:inst46.simple_clk
+fast_clock => inst43.CLK
 
 
 |bcd|clk_trimmer:inst2|simpleT:inst41
@@ -70,49 +70,7 @@ simple_clr => inst3.IN0
 simple_clk => inst.CLK
 
 
-|bcd|clk_trimmer:inst2|simpleT:inst24
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst2|simpleT:inst23
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst2|simpleT:inst22
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst2|simpleT:inst21
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst2|simpleT:inst20
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst2|simpleT:inst19
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst2|simpleT:inst18
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst2|simpleT:inst17
+|bcd|clk_trimmer:inst2|simpleT:inst46
 simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
 simple_clr => inst3.IN0
 simple_clk => inst.CLK
@@ -215,6 +173,54 @@ simple_clk => inst.CLK
 
 
 |bcd|clk_trimmer:inst2|simpleT:inst
+simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+simple_clr => inst3.IN0
+simple_clk => inst.CLK
+
+
+|bcd|clk_trimmer:inst2|simpleT:inst17
+simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+simple_clr => inst3.IN0
+simple_clk => inst.CLK
+
+
+|bcd|clk_trimmer:inst2|simpleT:inst20
+simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+simple_clr => inst3.IN0
+simple_clk => inst.CLK
+
+
+|bcd|clk_trimmer:inst2|simpleT:inst19
+simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+simple_clr => inst3.IN0
+simple_clk => inst.CLK
+
+
+|bcd|clk_trimmer:inst2|simpleT:inst18
+simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+simple_clr => inst3.IN0
+simple_clk => inst.CLK
+
+
+|bcd|clk_trimmer:inst2|simpleT:inst21
+simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+simple_clr => inst3.IN0
+simple_clk => inst.CLK
+
+
+|bcd|clk_trimmer:inst2|simpleT:inst22
+simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+simple_clr => inst3.IN0
+simple_clk => inst.CLK
+
+
+|bcd|clk_trimmer:inst2|simpleT:inst23
+simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+simple_clr => inst3.IN0
+simple_clk => inst.CLK
+
+
+|bcd|clk_trimmer:inst2|simpleT:inst24
 simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
 simple_clr => inst3.IN0
 simple_clk => inst.CLK

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for bcd
-Thu Sep 21 21:53:59 2023
+Thu Sep 28 16:02:05 2023
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -15,16 +15,15 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Source assignments for sld_signaltap:auto_signaltap_0
- 14. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
- 15. Signal Tap Logic Analyzer Settings
- 16. Post-Synthesis Netlist Statistics for Top Partition
- 17. Elapsed Time Per Partition
- 18. Connections to In-System Debugging Instance "auto_signaltap_0"
- 19. Analysis & Synthesis Messages
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Source assignments for sld_signaltap:auto_signaltap_0
+ 13. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
+ 14. Signal Tap Logic Analyzer Settings
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Connections to In-System Debugging Instance "auto_signaltap_0"
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -51,16 +50,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Sep 21 21:53:59 2023       ;
+; Analysis & Synthesis Status        ; Successful - Thu Sep 28 16:02:04 2023       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; bcd                                         ;
 ; Top-level Entity Name              ; bcd                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 582                                         ;
-;     Total combinational functions  ; 456                                         ;
-;     Dedicated logic registers      ; 402                                         ;
-; Total registers                    ; 402                                         ;
-; Total pins                         ; 13                                          ;
+; Total logic elements               ; 585                                         ;
+;     Total combinational functions  ; 459                                         ;
+;     Dedicated logic registers      ; 406                                         ;
+; Total registers                    ; 406                                         ;
+; Total pins                         ; 12                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 128                                         ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -162,13 +161,13 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.00        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
-;     Processors 3-12        ;   0.1%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -181,7 +180,7 @@ https://fpgasoftware.intel.com/eula.
 ; box.bdf                                                            ; yes             ; User Block Diagram/Schematic File            ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_5/multi_clock/box.bdf                                                            ;             ;
 ; simpleT.bdf                                                        ; yes             ; User Block Diagram/Schematic File            ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_5/multi_clock/simpleT.bdf                                                        ;             ;
 ; clk_trimmer.bdf                                                    ; yes             ; User Block Diagram/Schematic File            ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_5/multi_clock/clk_trimmer.bdf                                                    ;             ;
-; mux.bdf                                                            ; yes             ; User Block Diagram/Schematic File            ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_5/multi_clock/mux.bdf                                                            ;             ;
+; my_mux.bdf                                                         ; yes             ; User Block Diagram/Schematic File            ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_5/multi_clock/my_mux.bdf                                                         ;             ;
 ; counter.bdf                                                        ; yes             ; Auto-Found Block Diagram/Schematic File      ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_5/multi_clock/counter.bdf                                                        ;             ;
 ; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; /home/gabriel/intelFPGA_lite/19.1/quartus/libraries/megafunctions/sld_signaltap.vhd                                                      ;             ;
 ; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; /home/gabriel/intelFPGA_lite/19.1/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                                 ;             ;
@@ -245,30 +244,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 582                      ;
+; Estimated Total logic elements              ; 585                      ;
 ;                                             ;                          ;
-; Total combinational functions               ; 456                      ;
+; Total combinational functions               ; 459                      ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 174                      ;
-;     -- 3 input functions                    ; 125                      ;
-;     -- <=2 input functions                  ; 157                      ;
+;     -- 4 input functions                    ; 175                      ;
+;     -- 3 input functions                    ; 124                      ;
+;     -- <=2 input functions                  ; 160                      ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 387                      ;
+;     -- normal mode                          ; 390                      ;
 ;     -- arithmetic mode                      ; 69                       ;
 ;                                             ;                          ;
-; Total registers                             ; 402                      ;
-;     -- Dedicated logic registers            ; 402                      ;
+; Total registers                             ; 406                      ;
+;     -- Dedicated logic registers            ; 406                      ;
 ;     -- I/O registers                        ; 0                        ;
 ;                                             ;                          ;
-; I/O pins                                    ; 13                       ;
+; I/O pins                                    ; 12                       ;
 ; Total memory bits                           ; 128                      ;
 ;                                             ;                          ;
 ; Embedded Multiplier 9-bit elements          ; 0                        ;
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 286                      ;
-; Total fan-out                               ; 2739                     ;
+; Total fan-out                               ; 2751                     ;
 ; Average fan-out                             ; 3.06                     ;
 +---------------------------------------------+--------------------------+
 
@@ -278,9 +277,9 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                             ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |bcd                                                                                                                                    ; 456 (1)             ; 402 (0)                   ; 128         ; 0            ; 0       ; 0         ; 13   ; 0            ; |bcd                                                                                                                                                                                                                                                                                                                                            ; bcd                               ; work         ;
+; |bcd                                                                                                                                    ; 459 (1)             ; 406 (0)                   ; 128         ; 0            ; 0       ; 0         ; 12   ; 0            ; |bcd                                                                                                                                                                                                                                                                                                                                            ; bcd                               ; work         ;
 ;    |box:inst8|                                                                                                                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|box:inst8                                                                                                                                                                                                                                                                                                                                  ; box                               ; work         ;
-;    |clk_trimmer:inst1|                                                                                                                  ; 37 (8)              ; 30 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst1                                                                                                                                                                                                                                                                                                                          ; clk_trimmer                       ; work         ;
+;    |clk_trimmer:inst1|                                                                                                                  ; 40 (8)              ; 34 (2)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst1                                                                                                                                                                                                                                                                                                                          ; clk_trimmer                       ; work         ;
 ;       |simpleT:inst10|                                                                                                                  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst1|simpleT:inst10                                                                                                                                                                                                                                                                                                           ; simpleT                           ; work         ;
 ;       |simpleT:inst11|                                                                                                                  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst1|simpleT:inst11                                                                                                                                                                                                                                                                                                           ; simpleT                           ; work         ;
 ;       |simpleT:inst12|                                                                                                                  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst1|simpleT:inst12                                                                                                                                                                                                                                                                                                           ; simpleT                           ; work         ;
@@ -303,16 +302,18 @@ https://fpgasoftware.intel.com/eula.
 ;       |simpleT:inst43|                                                                                                                  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst1|simpleT:inst43                                                                                                                                                                                                                                                                                                           ; simpleT                           ; work         ;
 ;       |simpleT:inst44|                                                                                                                  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst1|simpleT:inst44                                                                                                                                                                                                                                                                                                           ; simpleT                           ; work         ;
 ;       |simpleT:inst45|                                                                                                                  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst1|simpleT:inst45                                                                                                                                                                                                                                                                                                           ; simpleT                           ; work         ;
-;       |simpleT:inst46|                                                                                                                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst1|simpleT:inst46                                                                                                                                                                                                                                                                                                           ; simpleT                           ; work         ;
+;       |simpleT:inst46|                                                                                                                  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst1|simpleT:inst46                                                                                                                                                                                                                                                                                                           ; simpleT                           ; work         ;
 ;       |simpleT:inst47|                                                                                                                  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst1|simpleT:inst47                                                                                                                                                                                                                                                                                                           ; simpleT                           ; work         ;
 ;       |simpleT:inst4|                                                                                                                   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst1|simpleT:inst4                                                                                                                                                                                                                                                                                                            ; simpleT                           ; work         ;
+;       |simpleT:inst50|                                                                                                                  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst1|simpleT:inst50                                                                                                                                                                                                                                                                                                           ; simpleT                           ; work         ;
+;       |simpleT:inst54|                                                                                                                  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst1|simpleT:inst54                                                                                                                                                                                                                                                                                                           ; simpleT                           ; work         ;
 ;       |simpleT:inst5|                                                                                                                   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst1|simpleT:inst5                                                                                                                                                                                                                                                                                                            ; simpleT                           ; work         ;
 ;       |simpleT:inst6|                                                                                                                   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst1|simpleT:inst6                                                                                                                                                                                                                                                                                                            ; simpleT                           ; work         ;
 ;       |simpleT:inst7|                                                                                                                   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst1|simpleT:inst7                                                                                                                                                                                                                                                                                                            ; simpleT                           ; work         ;
 ;       |simpleT:inst8|                                                                                                                   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst1|simpleT:inst8                                                                                                                                                                                                                                                                                                            ; simpleT                           ; work         ;
 ;       |simpleT:inst9|                                                                                                                   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|clk_trimmer:inst1|simpleT:inst9                                                                                                                                                                                                                                                                                                            ; simpleT                           ; work         ;
 ;    |counter:inst|                                                                                                                       ; 3 (3)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|counter:inst                                                                                                                                                                                                                                                                                                                               ; counter                           ; work         ;
-;    |mux:inst2|                                                                                                                          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|mux:inst2                                                                                                                                                                                                                                                                                                                                  ; mux                               ; work         ;
+;    |my_mux:inst2|                                                                                                                       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|my_mux:inst2                                                                                                                                                                                                                                                                                                                               ; my_mux                            ; work         ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 124 (1)             ; 90 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
 ;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 123 (0)             ; 90 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
 ;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 123 (0)             ; 90 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
@@ -380,25 +381,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; counter:inst|inst                     ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 1 ;                                        ;
-+---------------------------------------+----------------------------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 402   ;
+; Total registers                              ; 406   ;
 ; Number of registers using Synchronous Clear  ; 48    ;
 ; Number of registers using Synchronous Load   ; 58    ;
-; Number of registers using Asynchronous Clear ; 161   ;
+; Number of registers using Asynchronous Clear ; 162   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 262   ;
 ; Number of registers using Preset             ; 0     ;
@@ -513,18 +504,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 12                          ;
-; cycloneiii_ff         ; 33                          ;
-;     CLR               ; 29                          ;
-;     plain             ; 4                           ;
-; cycloneiii_lcell_comb ; 56                          ;
-;     normal            ; 56                          ;
-;         1 data inputs ; 39                          ;
-;         3 data inputs ; 8                           ;
-;         4 data inputs ; 9                           ;
+; boundary_port         ; 11                          ;
+; cycloneiii_ff         ; 37                          ;
+;     CLR               ; 30                          ;
+;     plain             ; 7                           ;
+; cycloneiii_lcell_comb ; 59                          ;
+;     normal            ; 59                          ;
+;         1 data inputs ; 42                          ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 10                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.80                        ;
+; Average LUT depth     ; 1.73                        ;
 +-----------------------+-----------------------------+
 
 
@@ -586,7 +577,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Thu Sep 21 21:53:42 2023
+    Info: Processing started: Thu Sep 28 16:01:47 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off bcd -c bcd
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -598,16 +589,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file simpleT
     Info (12023): Found entity 1: simpleT
 Info (12021): Found 1 design units, including 1 entities, in source file clk_trimmer.bdf
     Info (12023): Found entity 1: clk_trimmer
-Warning (12090): Entity "mux" obtained from "mux.bdf" instead of from Quartus Prime megafunction library
-Info (12021): Found 1 design units, including 1 entities, in source file mux.bdf
-    Info (12023): Found entity 1: mux
+Info (12021): Found 1 design units, including 1 entities, in source file my_mux.bdf
+    Info (12023): Found entity 1: my_mux
 Info (12127): Elaborating entity "bcd" for the top level hierarchy
 Info (12128): Elaborating entity "box" for hierarchy "box:inst8"
 Warning (275008): Primitive "NOT" of instance "inst" not used
 Warning (12125): Using design file counter.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: counter
 Info (12128): Elaborating entity "counter" for hierarchy "counter:inst"
-Info (12128): Elaborating entity "mux" for hierarchy "mux:inst2"
+Info (12128): Elaborating entity "my_mux" for hierarchy "my_mux:inst2"
 Info (12128): Elaborating entity "clk_trimmer" for hierarchy "clk_trimmer:inst1"
 Info (12128): Elaborating entity "simpleT" for hierarchy "clk_trimmer:inst1|simpleT:inst41"
 Warning (275011): Block or symbol "TFF" of instance "inst" overlaps another block or symbol
@@ -629,7 +619,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_ngc File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_5/multi_clock/db/cmpr_ngc.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2023.09.21.21:53:52 Progress: Loading slddf4920d8/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2023.09.28.16:01:58 Progress: Loading slddf4920d8/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -653,20 +643,20 @@ Info (12021): Found 2 design units, including 1 entities, in source file db/ip/s
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_5/multi_clock/db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Warning (19016): Clock multiplexers are found and protected
-    Warning (19017): Found clock multiplexer mux:inst2|inst7~0
+    Warning (19017): Found clock multiplexer my_mux:inst2|inst7~0
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Critical Warning (35025): Partially connected in-system debug instance "auto_signaltap_0" to 33 of its 35 required data inputs, trigger inputs, acquisition clocks, and dynamic pins.  There were 0 illegal, 0 inaccessible, and 2 missing sources or connections.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 615 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 618 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
-    Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 596 logic cells
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 600 logic cells
     Info (21064): Implemented 1 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 1060 megabytes
-    Info: Processing ended: Thu Sep 21 21:53:59 2023
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:35
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 1063 megabytes
+    Info: Processing ended: Thu Sep 28 16:02:05 2023
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:36
 
 

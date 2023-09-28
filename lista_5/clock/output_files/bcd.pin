@@ -475,7 +475,7 @@ RESERVED_INPUT               : G15       :        :                   :         
 RESERVED_INPUT               : G16       :        :                   :         : 7         :                
 RESERVED_INPUT               : G17       :        :                   :         : 7         :                
 RESERVED_INPUT               : G18       :        :                   :         : 7         :                
-o                            : G19       : output : 2.5 V             :         : 7         : Y              
+RESERVED_INPUT               : G19       :        :                   :         : 7         :                
 RESERVED_INPUT               : G20       :        :                   :         : 7         :                
 RESERVED_INPUT               : G21       :        :                   :         : 7         :                
 RESERVED_INPUT               : G22       :        :                   :         : 7         :                

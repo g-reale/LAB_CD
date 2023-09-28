@@ -24,7 +24,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 0 480 168 496)
 	(text "INPUT" (rect 125 0 154 10)(font "Arial" (font_size 6)))
-	(text "counter_clr" (rect 5 0 65 13)(font "Intel Clear" ))
+	(text "counter_clr" (rect 5 0 64 13)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -54,9 +54,9 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
-	(rect 0 352 168 368)
+	(rect 0 368 168 384)
 	(text "INPUT" (rect 125 0 154 10)(font "Arial" (font_size 6)))
-	(text "counter_dir" (rect 5 0 66 13)(font "Intel Clear" ))
+	(text "counter_dir" (rect 5 0 65 13)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -72,7 +72,7 @@ https://fpgasoftware.intel.com/eula.
 	(output)
 	(rect 432 136 448 312)
 	(text "OUTPUT" (rect 0 135 10 175)(font "Arial" (font_size 6))(vertical))
-	(text "LSB" (rect 0 5 11 28)(font "Arial" )(vertical))
+	(text "LSB" (rect 0 5 11 27)(font "Arial" )(vertical))
 	(pt 8 176)
 	(drawing
 		(line (pt 8 176)(pt 8 124))
@@ -89,7 +89,7 @@ https://fpgasoftware.intel.com/eula.
 	(output)
 	(rect 608 136 624 312)
 	(text "OUTPUT" (rect 0 135 10 175)(font "Arial" (font_size 6))(vertical))
-	(text "B" (rect 0 5 13 14)(font "Intel Clear" )(vertical))
+	(text "B" (rect 0 5 13 13)(font "Intel Clear" )(vertical))
 	(pt 8 176)
 	(drawing
 		(line (pt 8 176)(pt 8 124))
@@ -107,7 +107,7 @@ https://fpgasoftware.intel.com/eula.
 	(output)
 	(rect 784 136 800 312)
 	(text "OUTPUT" (rect 0 135 10 175)(font "Arial" (font_size 6))(vertical))
-	(text "MSB" (rect 0 5 13 30)(font "Intel Clear" )(vertical))
+	(text "MSB" (rect 0 5 13 29)(font "Intel Clear" )(vertical))
 	(pt 8 176)
 	(drawing
 		(line (pt 8 176)(pt 8 124))
@@ -380,56 +380,6 @@ https://fpgasoftware.intel.com/eula.
 		(circle (rect 28 68 36 76))
 	)
 )
-(symbol
-	(rect 208 336 272 416)
-	(text "DFF" (rect 1 0 21 10)(font "Arial" (font_size 6)))
-	(text "inst" (rect 3 68 21 79)(font "Arial" ))
-	(port
-		(pt 32 80)
-		(input)
-		(text "CLRN" (rect 21 59 48 70)(font "Courier New" (bold)))
-		(text "CLRN" (rect 21 58 48 69)(font "Courier New" (bold)))
-		(line (pt 32 80)(pt 32 76))
-	)
-	(port
-		(pt 0 40)
-		(input)
-		(text "CLK" (rect 3 29 24 40)(font "Courier New" (bold))(invisible))
-		(text "CLK" (rect 3 29 24 40)(font "Courier New" (bold))(invisible))
-		(line (pt 0 40)(pt 12 40))
-	)
-	(port
-		(pt 0 24)
-		(input)
-		(text "D" (rect 14 20 22 31)(font "Courier New" (bold)))
-		(text "D" (rect 14 20 22 31)(font "Courier New" (bold)))
-		(line (pt 0 24)(pt 12 24))
-	)
-	(port
-		(pt 32 0)
-		(input)
-		(text "PRN" (rect 24 13 44 24)(font "Courier New" (bold)))
-		(text "PRN" (rect 24 11 44 22)(font "Courier New" (bold)))
-		(line (pt 32 4)(pt 32 0))
-	)
-	(port
-		(pt 64 24)
-		(output)
-		(text "Q" (rect 45 20 53 31)(font "Courier New" (bold)))
-		(text "Q" (rect 41 20 49 31)(font "Courier New" (bold)))
-		(line (pt 52 24)(pt 64 24))
-	)
-	(drawing
-		(line (pt 12 12)(pt 52 12))
-		(line (pt 12 68)(pt 52 68))
-		(line (pt 52 68)(pt 52 12))
-		(line (pt 12 68)(pt 12 12))
-		(line (pt 19 40)(pt 12 47))
-		(line (pt 12 32)(pt 20 40))
-		(circle (rect 28 4 36 12))
-		(circle (rect 28 68 36 76))
-	)
-)
 (connector
 	(pt 400 472)
 	(pt 400 488)
@@ -579,56 +529,16 @@ https://fpgasoftware.intel.com/eula.
 	(pt 344 488)
 )
 (connector
-	(pt 168 360)
-	(pt 208 360)
-)
-(connector
-	(pt 272 376)
-	(pt 456 376)
-)
-(connector
-	(pt 272 360)
-	(pt 272 376)
-)
-(connector
-	(pt 208 376)
-	(pt 208 432)
-)
-(connector
-	(pt 168 432)
-	(pt 208 432)
-)
-(connector
-	(pt 208 432)
-	(pt 368 432)
-)
-(connector
-	(pt 240 416)
-	(pt 192 416)
-)
-(connector
-	(pt 192 416)
-	(pt 192 328)
-)
-(connector
-	(pt 240 336)
-	(pt 240 328)
-)
-(connector
 	(pt 400 296)
-	(pt 400 328)
-)
-(connector
-	(pt 400 328)
 	(pt 400 352)
 )
 (connector
-	(pt 192 328)
-	(pt 240 328)
+	(pt 168 432)
+	(pt 368 432)
 )
 (connector
-	(pt 240 328)
-	(pt 400 328)
+	(pt 168 376)
+	(pt 456 376)
 )
 (junction (pt 400 352))
 (junction (pt 440 416))
@@ -639,6 +549,3 @@ https://fpgasoftware.intel.com/eula.
 (junction (pt 400 488))
 (junction (pt 576 488))
 (junction (pt 720 352))
-(junction (pt 208 432))
-(junction (pt 400 328))
-(junction (pt 240 328))
