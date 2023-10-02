@@ -1,15 +1,564 @@
 |bcd
+o_LSB <= 4bit_or:inst13.or_o_LSB
+a_LSB => 4bit_adder:inst.sum_a_LSB
+a_LSB => 4bit_and:inst1.and_a_LSB
+a_LSB => 4bit_multiplier:inst3.mul_a_LSB
+a_LSB => 4bit_or:inst4.or_a_LSB
+a_1 => 4bit_adder:inst.sum_a_1
+a_1 => 4bit_and:inst1.and_a_1
+a_1 => 4bit_multiplier:inst3.mul_a_1
+a_1 => 4bit_or:inst4.or_a_1
+a_2 => 4bit_adder:inst.sum_a_2
+a_2 => 4bit_and:inst1.and_a_2
+a_2 => 4bit_multiplier:inst3.mul_a_2
+a_2 => 4bit_or:inst4.or_a_2
+a_MSB => 4bit_adder:inst.sum_a_MSB
+a_MSB => 4bit_and:inst1.and_a_MSB
+a_MSB => 4bit_multiplier:inst3.mul_a_MSB
+a_MSB => 4bit_or:inst4.or_a_MSB
+b_LSB => 4bit_conditional_not:inst10.not_LSB
+b_1 => 4bit_conditional_not:inst10.not_1
+b_2 => 4bit_conditional_not:inst10.not_2
+b_MSB => 4bit_conditional_not:inst10.not_MSB
+bb => 4bit_conditional_not:inst10.not_en
+c_in => 4bit_adder:inst.carry_in
+sel_1 => inst16.IN0
+sel_1 => inst15.IN0
+sel_1 => inst18.IN0
+sel_1 => inst21.IN0
+sel_0 => inst22.IN0
+sel_0 => inst20.IN0
+sel_0 => inst18.IN1
+sel_0 => inst19.IN1
+o_1 <= 4bit_or:inst13.or_o_1
+o_2 <= 4bit_or:inst13.or_o_2
+o_MSB <= 4bit_or:inst13.or_o_MSB
 a <= box:inst8.h
-sw_17 => my_mux:inst2.adr_MSB
-sw_16 => my_mux:inst2.adr_LSB
-clk => clk_trimmer:inst1.fast_clock
-clr => counter:inst.counter_clr
 b <= box:inst8.i
 c <= box:inst8.j
 d <= box:inst8.k
 e <= box:inst8.l
 f <= box:inst8.m
 g <= box:inst8.n
+
+
+|bcd|4bit_or:inst13
+or_o_LSB <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+or_b_LSB => inst1.IN0
+or_a_LSB => inst1.IN1
+or_o_1 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+or_b_1 => inst2.IN0
+or_a_1 => inst2.IN1
+or_o_2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+or_b_2 => inst3.IN0
+or_a_2 => inst3.IN1
+or_o_MSB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+or_b_MSB => inst4.IN0
+or_a_MSB => inst4.IN1
+
+
+|bcd|4bit_or:inst11
+or_o_LSB <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+or_b_LSB => inst1.IN0
+or_a_LSB => inst1.IN1
+or_o_1 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+or_b_1 => inst2.IN0
+or_a_1 => inst2.IN1
+or_o_2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+or_b_2 => inst3.IN0
+or_a_2 => inst3.IN1
+or_o_MSB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+or_b_MSB => inst4.IN0
+or_a_MSB => inst4.IN1
+
+
+|bcd|enable:inst5
+en_o_LSB <= inst.DB_MAX_OUTPUT_PORT_TYPE
+en_LSB => inst.IN0
+en => inst.IN1
+en => inst1.IN1
+en => inst2.IN1
+en => inst3.IN1
+en_o_1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+en_1 => inst1.IN0
+en_o_2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+en_2 => inst2.IN0
+en_o_MSB <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+en_MSB => inst3.IN0
+
+
+|bcd|4bit_adder:inst
+sum_LSB <= full_bit_adder:inst.sum_out
+sum_b_LSB => full_bit_adder:inst.sum_a
+sum_a_LSB => full_bit_adder:inst.sum_b
+carry_in => full_bit_adder:inst.carry_in
+sum_1 <= full_bit_adder:inst3.sum_out
+sum_a_1 => full_bit_adder:inst3.sum_a
+sum_b_1 => full_bit_adder:inst3.sum_b
+sum_2 <= full_bit_adder:inst4.sum_out
+sum_a_2 => full_bit_adder:inst4.sum_a
+sum_b_2 => full_bit_adder:inst4.sum_b
+sum_MSB <= full_bit_adder:inst5.sum_out
+sum_a_MSB => full_bit_adder:inst5.sum_a
+sum_b_MSB => full_bit_adder:inst5.sum_b
+
+
+|bcd|4bit_adder:inst|full_bit_adder:inst
+sum_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sum_a => inst.IN0
+sum_a => inst5.IN1
+sum_a => inst6.IN1
+sum_b => inst.IN1
+sum_b => inst6.IN0
+sum_b => inst4.IN1
+carry_in => inst2.IN1
+carry_in => inst5.IN0
+carry_in => inst4.IN0
+c_out <= insta.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcd|4bit_adder:inst|full_bit_adder:inst3
+sum_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sum_a => inst.IN0
+sum_a => inst5.IN1
+sum_a => inst6.IN1
+sum_b => inst.IN1
+sum_b => inst6.IN0
+sum_b => inst4.IN1
+carry_in => inst2.IN1
+carry_in => inst5.IN0
+carry_in => inst4.IN0
+c_out <= insta.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcd|4bit_adder:inst|full_bit_adder:inst4
+sum_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sum_a => inst.IN0
+sum_a => inst5.IN1
+sum_a => inst6.IN1
+sum_b => inst.IN1
+sum_b => inst6.IN0
+sum_b => inst4.IN1
+carry_in => inst2.IN1
+carry_in => inst5.IN0
+carry_in => inst4.IN0
+c_out <= insta.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcd|4bit_adder:inst|full_bit_adder:inst5
+sum_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sum_a => inst.IN0
+sum_a => inst5.IN1
+sum_a => inst6.IN1
+sum_b => inst.IN1
+sum_b => inst6.IN0
+sum_b => inst4.IN1
+carry_in => inst2.IN1
+carry_in => inst5.IN0
+carry_in => inst4.IN0
+c_out <= insta.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcd|4bit_conditional_not:inst10
+not_o_LSB <= inst.DB_MAX_OUTPUT_PORT_TYPE
+not_LSB => inst.IN0
+not_en => inst.IN1
+not_en => inst1.IN1
+not_en => inst2.IN1
+not_en => inst3.IN1
+not_o_1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+not_1 => inst1.IN0
+not_o_2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+not_2 => inst2.IN0
+not_o_MSB <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+not_MSB => inst3.IN0
+
+
+|bcd|enable:inst6
+en_o_LSB <= inst.DB_MAX_OUTPUT_PORT_TYPE
+en_LSB => inst.IN0
+en => inst.IN1
+en => inst1.IN1
+en => inst2.IN1
+en => inst3.IN1
+en_o_1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+en_1 => inst1.IN0
+en_o_2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+en_2 => inst2.IN0
+en_o_MSB <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+en_MSB => inst3.IN0
+
+
+|bcd|4bit_and:inst1
+and_o_LSB <= inst.DB_MAX_OUTPUT_PORT_TYPE
+and_a_LSB => inst.IN0
+and_b_LSB => inst.IN1
+and_o_1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+and_a_1 => inst1.IN0
+and_b_1 => inst1.IN1
+and_o_2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+and_a_2 => inst2.IN0
+and_b_2 => inst2.IN1
+and_o_MSB <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+and_a_MSB => inst3.IN0
+and_b_MSB => inst3.IN1
+
+
+|bcd|4bit_or:inst12
+or_o_LSB <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+or_b_LSB => inst1.IN0
+or_a_LSB => inst1.IN1
+or_o_1 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+or_b_1 => inst2.IN0
+or_a_1 => inst2.IN1
+or_o_2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+or_b_2 => inst3.IN0
+or_a_2 => inst3.IN1
+or_o_MSB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+or_b_MSB => inst4.IN0
+or_a_MSB => inst4.IN1
+
+
+|bcd|enable:inst7
+en_o_LSB <= inst.DB_MAX_OUTPUT_PORT_TYPE
+en_LSB => inst.IN0
+en => inst.IN1
+en => inst1.IN1
+en => inst2.IN1
+en => inst3.IN1
+en_o_1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+en_1 => inst1.IN0
+en_o_2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+en_2 => inst2.IN0
+en_o_MSB <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+en_MSB => inst3.IN0
+
+
+|bcd|4bit_multiplier:inst3
+mul_o_LSB <= 4bit_adder:inst8.sum_LSB
+mul_a_LSB => enable:inst.en_LSB
+mul_a_LSB => enable:inst1.en_1
+mul_a_LSB => enable:inst6.en_2
+mul_a_LSB => enable:inst5.en_MSB
+mul_a_1 => enable:inst.en_1
+mul_a_1 => enable:inst1.en_2
+mul_a_1 => enable:inst6.en_MSB
+mul_a_2 => enable:inst.en_2
+mul_a_2 => enable:inst1.en_MSB
+mul_a_MSB => enable:inst.en_MSB
+mul_b_LSB => enable:inst.en
+mul_b_1 => enable:inst1.en
+mul_b_2 => enable:inst6.en
+mul_b_MSB => enable:inst5.en
+mul_o_1 <= 4bit_adder:inst8.sum_1
+mul_o_2 <= 4bit_adder:inst8.sum_2
+mul_o_MSB <= 4bit_adder:inst8.sum_MSB
+
+
+|bcd|4bit_multiplier:inst3|4bit_adder:inst8
+sum_LSB <= full_bit_adder:inst.sum_out
+sum_b_LSB => full_bit_adder:inst.sum_a
+sum_a_LSB => full_bit_adder:inst.sum_b
+carry_in => full_bit_adder:inst.carry_in
+sum_1 <= full_bit_adder:inst3.sum_out
+sum_a_1 => full_bit_adder:inst3.sum_a
+sum_b_1 => full_bit_adder:inst3.sum_b
+sum_2 <= full_bit_adder:inst4.sum_out
+sum_a_2 => full_bit_adder:inst4.sum_a
+sum_b_2 => full_bit_adder:inst4.sum_b
+sum_MSB <= full_bit_adder:inst5.sum_out
+sum_a_MSB => full_bit_adder:inst5.sum_a
+sum_b_MSB => full_bit_adder:inst5.sum_b
+
+
+|bcd|4bit_multiplier:inst3|4bit_adder:inst8|full_bit_adder:inst
+sum_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sum_a => inst.IN0
+sum_a => inst5.IN1
+sum_a => inst6.IN1
+sum_b => inst.IN1
+sum_b => inst6.IN0
+sum_b => inst4.IN1
+carry_in => inst2.IN1
+carry_in => inst5.IN0
+carry_in => inst4.IN0
+c_out <= insta.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcd|4bit_multiplier:inst3|4bit_adder:inst8|full_bit_adder:inst3
+sum_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sum_a => inst.IN0
+sum_a => inst5.IN1
+sum_a => inst6.IN1
+sum_b => inst.IN1
+sum_b => inst6.IN0
+sum_b => inst4.IN1
+carry_in => inst2.IN1
+carry_in => inst5.IN0
+carry_in => inst4.IN0
+c_out <= insta.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcd|4bit_multiplier:inst3|4bit_adder:inst8|full_bit_adder:inst4
+sum_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sum_a => inst.IN0
+sum_a => inst5.IN1
+sum_a => inst6.IN1
+sum_b => inst.IN1
+sum_b => inst6.IN0
+sum_b => inst4.IN1
+carry_in => inst2.IN1
+carry_in => inst5.IN0
+carry_in => inst4.IN0
+c_out <= insta.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcd|4bit_multiplier:inst3|4bit_adder:inst8|full_bit_adder:inst5
+sum_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sum_a => inst.IN0
+sum_a => inst5.IN1
+sum_a => inst6.IN1
+sum_b => inst.IN1
+sum_b => inst6.IN0
+sum_b => inst4.IN1
+carry_in => inst2.IN1
+carry_in => inst5.IN0
+carry_in => inst4.IN0
+c_out <= insta.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcd|4bit_multiplier:inst3|4bit_adder:inst2
+sum_LSB <= full_bit_adder:inst.sum_out
+sum_b_LSB => full_bit_adder:inst.sum_a
+sum_a_LSB => full_bit_adder:inst.sum_b
+carry_in => full_bit_adder:inst.carry_in
+sum_1 <= full_bit_adder:inst3.sum_out
+sum_a_1 => full_bit_adder:inst3.sum_a
+sum_b_1 => full_bit_adder:inst3.sum_b
+sum_2 <= full_bit_adder:inst4.sum_out
+sum_a_2 => full_bit_adder:inst4.sum_a
+sum_b_2 => full_bit_adder:inst4.sum_b
+sum_MSB <= full_bit_adder:inst5.sum_out
+sum_a_MSB => full_bit_adder:inst5.sum_a
+sum_b_MSB => full_bit_adder:inst5.sum_b
+
+
+|bcd|4bit_multiplier:inst3|4bit_adder:inst2|full_bit_adder:inst
+sum_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sum_a => inst.IN0
+sum_a => inst5.IN1
+sum_a => inst6.IN1
+sum_b => inst.IN1
+sum_b => inst6.IN0
+sum_b => inst4.IN1
+carry_in => inst2.IN1
+carry_in => inst5.IN0
+carry_in => inst4.IN0
+c_out <= insta.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcd|4bit_multiplier:inst3|4bit_adder:inst2|full_bit_adder:inst3
+sum_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sum_a => inst.IN0
+sum_a => inst5.IN1
+sum_a => inst6.IN1
+sum_b => inst.IN1
+sum_b => inst6.IN0
+sum_b => inst4.IN1
+carry_in => inst2.IN1
+carry_in => inst5.IN0
+carry_in => inst4.IN0
+c_out <= insta.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcd|4bit_multiplier:inst3|4bit_adder:inst2|full_bit_adder:inst4
+sum_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sum_a => inst.IN0
+sum_a => inst5.IN1
+sum_a => inst6.IN1
+sum_b => inst.IN1
+sum_b => inst6.IN0
+sum_b => inst4.IN1
+carry_in => inst2.IN1
+carry_in => inst5.IN0
+carry_in => inst4.IN0
+c_out <= insta.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcd|4bit_multiplier:inst3|4bit_adder:inst2|full_bit_adder:inst5
+sum_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sum_a => inst.IN0
+sum_a => inst5.IN1
+sum_a => inst6.IN1
+sum_b => inst.IN1
+sum_b => inst6.IN0
+sum_b => inst4.IN1
+carry_in => inst2.IN1
+carry_in => inst5.IN0
+carry_in => inst4.IN0
+c_out <= insta.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcd|4bit_multiplier:inst3|enable:inst
+en_o_LSB <= inst.DB_MAX_OUTPUT_PORT_TYPE
+en_LSB => inst.IN0
+en => inst.IN1
+en => inst1.IN1
+en => inst2.IN1
+en => inst3.IN1
+en_o_1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+en_1 => inst1.IN0
+en_o_2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+en_2 => inst2.IN0
+en_o_MSB <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+en_MSB => inst3.IN0
+
+
+|bcd|4bit_multiplier:inst3|enable:inst1
+en_o_LSB <= inst.DB_MAX_OUTPUT_PORT_TYPE
+en_LSB => inst.IN0
+en => inst.IN1
+en => inst1.IN1
+en => inst2.IN1
+en => inst3.IN1
+en_o_1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+en_1 => inst1.IN0
+en_o_2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+en_2 => inst2.IN0
+en_o_MSB <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+en_MSB => inst3.IN0
+
+
+|bcd|4bit_multiplier:inst3|4bit_adder:instb
+sum_LSB <= full_bit_adder:inst.sum_out
+sum_b_LSB => full_bit_adder:inst.sum_a
+sum_a_LSB => full_bit_adder:inst.sum_b
+carry_in => full_bit_adder:inst.carry_in
+sum_1 <= full_bit_adder:inst3.sum_out
+sum_a_1 => full_bit_adder:inst3.sum_a
+sum_b_1 => full_bit_adder:inst3.sum_b
+sum_2 <= full_bit_adder:inst4.sum_out
+sum_a_2 => full_bit_adder:inst4.sum_a
+sum_b_2 => full_bit_adder:inst4.sum_b
+sum_MSB <= full_bit_adder:inst5.sum_out
+sum_a_MSB => full_bit_adder:inst5.sum_a
+sum_b_MSB => full_bit_adder:inst5.sum_b
+
+
+|bcd|4bit_multiplier:inst3|4bit_adder:instb|full_bit_adder:inst
+sum_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sum_a => inst.IN0
+sum_a => inst5.IN1
+sum_a => inst6.IN1
+sum_b => inst.IN1
+sum_b => inst6.IN0
+sum_b => inst4.IN1
+carry_in => inst2.IN1
+carry_in => inst5.IN0
+carry_in => inst4.IN0
+c_out <= insta.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcd|4bit_multiplier:inst3|4bit_adder:instb|full_bit_adder:inst3
+sum_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sum_a => inst.IN0
+sum_a => inst5.IN1
+sum_a => inst6.IN1
+sum_b => inst.IN1
+sum_b => inst6.IN0
+sum_b => inst4.IN1
+carry_in => inst2.IN1
+carry_in => inst5.IN0
+carry_in => inst4.IN0
+c_out <= insta.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcd|4bit_multiplier:inst3|4bit_adder:instb|full_bit_adder:inst4
+sum_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sum_a => inst.IN0
+sum_a => inst5.IN1
+sum_a => inst6.IN1
+sum_b => inst.IN1
+sum_b => inst6.IN0
+sum_b => inst4.IN1
+carry_in => inst2.IN1
+carry_in => inst5.IN0
+carry_in => inst4.IN0
+c_out <= insta.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcd|4bit_multiplier:inst3|4bit_adder:instb|full_bit_adder:inst5
+sum_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sum_a => inst.IN0
+sum_a => inst5.IN1
+sum_a => inst6.IN1
+sum_b => inst.IN1
+sum_b => inst6.IN0
+sum_b => inst4.IN1
+carry_in => inst2.IN1
+carry_in => inst5.IN0
+carry_in => inst4.IN0
+c_out <= insta.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bcd|4bit_multiplier:inst3|enable:inst6
+en_o_LSB <= inst.DB_MAX_OUTPUT_PORT_TYPE
+en_LSB => inst.IN0
+en => inst.IN1
+en => inst1.IN1
+en => inst2.IN1
+en => inst3.IN1
+en_o_1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+en_1 => inst1.IN0
+en_o_2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+en_2 => inst2.IN0
+en_o_MSB <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+en_MSB => inst3.IN0
+
+
+|bcd|4bit_multiplier:inst3|enable:inst5
+en_o_LSB <= inst.DB_MAX_OUTPUT_PORT_TYPE
+en_LSB => inst.IN0
+en => inst.IN1
+en => inst1.IN1
+en => inst2.IN1
+en => inst3.IN1
+en_o_1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+en_1 => inst1.IN0
+en_o_2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+en_2 => inst2.IN0
+en_o_MSB <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+en_MSB => inst3.IN0
+
+
+|bcd|enable:inst9
+en_o_LSB <= inst.DB_MAX_OUTPUT_PORT_TYPE
+en_LSB => inst.IN0
+en => inst.IN1
+en => inst1.IN1
+en => inst2.IN1
+en => inst3.IN1
+en_o_1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+en_1 => inst1.IN0
+en_o_2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+en_2 => inst2.IN0
+en_o_MSB <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+en_MSB => inst3.IN0
+
+
+|bcd|4bit_or:inst4
+or_o_LSB <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+or_b_LSB => inst1.IN0
+or_a_LSB => inst1.IN1
+or_o_1 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+or_b_1 => inst2.IN0
+or_a_1 => inst2.IN1
+or_o_2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+or_b_2 => inst3.IN0
+or_a_2 => inst3.IN1
+or_o_MSB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+or_b_MSB => inst4.IN0
+or_a_MSB => inst4.IN1
 
 
 |bcd|box:inst8
@@ -48,231 +597,5 @@ k <= inst36.DB_MAX_OUTPUT_PORT_TYPE
 l <= inst37.DB_MAX_OUTPUT_PORT_TYPE
 m <= inst38.DB_MAX_OUTPUT_PORT_TYPE
 n <= inst39.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|bcd|counter:inst
-LSB <= inst3.DB_MAX_OUTPUT_PORT_TYPE
-counter_clr => inst7.IN0
-counter_clk => inst3.CLK
-B <= inst5.DB_MAX_OUTPUT_PORT_TYPE
-counter_dir => inst1.IN0
-counter_dir => inst2.IN0
-MSB <= inst6.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|bcd|my_mux:inst2
-mux_o <= inst7.DB_MAX_OUTPUT_PORT_TYPE
-adr_MSB => inst.IN0
-adr_MSB => inst5.IN0
-adr_MSB => inst6.IN0
-adr_LSB => inst2.IN0
-adr_LSB => inst6.IN1
-adr_LSB => inst4.IN1
-i_LSB => inst3.IN2
-i_2 => inst5.IN2
-i_MSB => inst6.IN2
-i_1 => inst4.IN2
-
-
-|bcd|clk_trimmer:inst1
-half <= simpleT:inst41.simple_Q
-fast_clock => simpleT:inst50.simple_clk
-fast_clock => inst.CLK
-fast_clock => inst25.CLK
-one <= simpleT:inst43.simple_Q
-two <= simpleT:inst44.simple_Q
-sx <= simpleT:inst54.simple_Q
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst41
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst24
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst23
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst22
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst21
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst20
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst19
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst18
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst17
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst16
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst15
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst14
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst13
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst12
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst11
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst10
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst9
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst8
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst7
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst6
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst5
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst4
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst3
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst2
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst1
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst50
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst43
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst44
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst54
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst47
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst46
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
-
-
-|bcd|clk_trimmer:inst1|simpleT:inst45
-simple_Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-simple_clr => inst3.IN0
-simple_clk => inst.CLK
 
 

@@ -24,7 +24,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 168 288 336 304)
 	(text "INPUT" (rect 125 0 154 10)(font "Arial" (font_size 6)))
-	(text "sum_a" (rect 5 0 40 13)(font "Intel Clear" ))
+	(text "sum_a" (rect 5 0 39 13)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -40,7 +40,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 168 304 336 320)
 	(text "INPUT" (rect 125 0 154 10)(font "Arial" (font_size 6)))
-	(text "sum_b" (rect 5 0 41 13)(font "Intel Clear" ))
+	(text "sum_b" (rect 5 0 40 13)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -56,7 +56,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 168 320 336 336)
 	(text "INPUT" (rect 125 0 154 10)(font "Arial" (font_size 6)))
-	(text "carry_in" (rect 5 0 47 11)(font "Arial" ))
+	(text "carry_in" (rect 5 0 46 11)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -88,7 +88,7 @@ https://fpgasoftware.intel.com/eula.
 	(output)
 	(rect 624 416 800 432)
 	(text "OUTPUT" (rect 1 0 41 10)(font "Arial" (font_size 6)))
-	(text "carry_out" (rect 90 0 137 11)(font "Arial" ))
+	(text "c_out" (rect 90 0 118 11)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -267,7 +267,7 @@ https://fpgasoftware.intel.com/eula.
 (symbol
 	(rect 552 400 616 448)
 	(text "OR3" (rect 1 0 23 10)(font "Arial" (font_size 6)))
-	(text "inst" (rect 3 37 24 50)(font "Arial" (font_size 8)))
+	(text "insta" (rect 3 37 31 50)(font "Arial" (font_size 8)))
 	(port
 		(pt 0 24)
 		(input)

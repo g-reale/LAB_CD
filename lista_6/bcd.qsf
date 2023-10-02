@@ -76,8 +76,6 @@ set_location_assignment PIN_AH21 -to d
 set_location_assignment PIN_AE19 -to e
 set_location_assignment PIN_AF19 -to f
 set_location_assignment PIN_AE18 -to g
-set_location_assignment PIN_Y2 -to clk
-set_location_assignment PIN_Y16 -to clr
 set_global_assignment -name ENABLE_SIGNALTAP ON
 set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
 set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id auto_signaltap_0
@@ -142,13 +140,27 @@ set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_COUNTER_PIPELINE=
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=basic,1," -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id auto_signaltap_0
-set_location_assignment PIN_G19 -to o
 set_global_assignment -name BDF_FILE simpleT.bdf
-set_location_assignment PIN_AE16 -to sw_17
-set_location_assignment PIN_AD21 -to sw_16
 set_global_assignment -name BDF_FILE my_mux.bdf
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name BDF_FILE full_bit_adder.bdf
 set_global_assignment -name BDF_FILE 4bit_adder.bdf
-set_global_assignment -name BDF_FILE Block3.bdf
+set_global_assignment -name BDF_FILE enable.bdf
+set_location_assignment PIN_Y16 -to a_LSB
+set_location_assignment PIN_AD21 -to a_1
+set_location_assignment PIN_AE16 -to a_2
+set_location_assignment PIN_AD15 -to a_MSB
+set_location_assignment PIN_AG25 -to b_MSB
+set_location_assignment PIN_AD22 -to b_2
+set_location_assignment PIN_AF22 -to b_1
+set_location_assignment PIN_AF21 -to b_LSB
+set_location_assignment PIN_AF15 -to sel_0
+set_location_assignment PIN_AF24 -to sel_1
+set_location_assignment PIN_G19 -to o_LSB
+set_location_assignment PIN_F19 -to o_1
+set_location_assignment PIN_E19 -to o_2
+set_location_assignment PIN_F21 -to o_MSB
+set_global_assignment -name BDF_FILE 4bit_conditional_not.bdf
+set_location_assignment PIN_AD19 -to c_in
+set_location_assignment PIN_AF16 -to bb
 set_global_assignment -name SLD_FILE db/stp1_auto_stripped.stp
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
