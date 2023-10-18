@@ -1,5 +1,5 @@
 Analysis & Synthesis report for bcd
-Mon Oct  2 19:38:45 2023
+Wed Oct 18 19:07:11 2023
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -50,16 +50,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Oct  2 19:38:45 2023       ;
+; Analysis & Synthesis Status        ; Successful - Wed Oct 18 19:07:11 2023       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; bcd                                         ;
 ; Top-level Entity Name              ; bcd                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 576                                         ;
+; Total logic elements               ; 577                                         ;
 ;     Total combinational functions  ; 451                                         ;
-;     Dedicated logic registers      ; 369                                         ;
-; Total registers                    ; 369                                         ;
-; Total pins                         ; 24                                          ;
+;     Dedicated logic registers      ; 380                                         ;
+; Total registers                    ; 380                                         ;
+; Total pins                         ; 23                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 128                                         ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -162,10 +162,11 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -174,15 +175,21 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+-------------+
 ; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                                 ; Library     ;
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+-------------+
-; bcd.bdf                                                            ; yes             ; User Block Diagram/Schematic File            ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/bcd.bdf                                                            ;             ;
-; box.bdf                                                            ; yes             ; User Block Diagram/Schematic File            ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/box.bdf                                                            ;             ;
-; full_bit_adder.bdf                                                 ; yes             ; User Block Diagram/Schematic File            ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/full_bit_adder.bdf                                                 ;             ;
-; 4bit_adder.bdf                                                     ; yes             ; User Block Diagram/Schematic File            ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/4bit_adder.bdf                                                     ;             ;
-; enable.bdf                                                         ; yes             ; User Block Diagram/Schematic File            ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/enable.bdf                                                         ;             ;
-; 4bit_conditional_not.bdf                                           ; yes             ; User Block Diagram/Schematic File            ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/4bit_conditional_not.bdf                                           ;             ;
-; 4bit_or.bdf                                                        ; yes             ; Auto-Found Block Diagram/Schematic File      ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/4bit_or.bdf                                                        ;             ;
-; 4bit_and.bdf                                                       ; yes             ; Auto-Found Block Diagram/Schematic File      ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/4bit_and.bdf                                                       ;             ;
-; 4bit_multiplier.bdf                                                ; yes             ; Auto-Found Block Diagram/Schematic File      ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/4bit_multiplier.bdf                                                ;             ;
+; bcd.bdf                                                            ; yes             ; User Block Diagram/Schematic File            ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/bcd.bdf                                                            ;             ;
+; box.bdf                                                            ; yes             ; User Block Diagram/Schematic File            ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/box.bdf                                                            ;             ;
+; enable.bdf                                                         ; yes             ; User Block Diagram/Schematic File            ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/enable.bdf                                                         ;             ;
+; mux_d.bdf                                                          ; yes             ; User Block Diagram/Schematic File            ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/mux_d.bdf                                                          ;             ;
+; 1_en.bdf                                                           ; yes             ; User Block Diagram/Schematic File            ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/1_en.bdf                                                           ;             ;
+; 2_en.bdf                                                           ; yes             ; User Block Diagram/Schematic File            ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/2_en.bdf                                                           ;             ;
+; 3_en.bdf                                                           ; yes             ; User Block Diagram/Schematic File            ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/3_en.bdf                                                           ;             ;
+; 4_en.bdf                                                           ; yes             ; User Block Diagram/Schematic File            ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/4_en.bdf                                                           ;             ;
+; 5_en.bdf                                                           ; yes             ; User Block Diagram/Schematic File            ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/5_en.bdf                                                           ;             ;
+; 7_en.bdf                                                           ; yes             ; User Block Diagram/Schematic File            ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/7_en.bdf                                                           ;             ;
+; 8_en.bdf                                                           ; yes             ; User Block Diagram/Schematic File            ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/8_en.bdf                                                           ;             ;
+; 0_en.bdf                                                           ; yes             ; User Block Diagram/Schematic File            ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/0_en.bdf                                                           ;             ;
+; off_en.bdf                                                         ; yes             ; User Block Diagram/Schematic File            ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/off_en.bdf                                                         ;             ;
+; loader.bdf                                                         ; yes             ; User Block Diagram/Schematic File            ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/loader.bdf                                                         ;             ;
+; 4bit_or.bdf                                                        ; yes             ; Auto-Found Block Diagram/Schematic File      ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/4bit_or.bdf                                                        ;             ;
 ; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; /home/gabriel/intelFPGA_lite/19.1/quartus/libraries/megafunctions/sld_signaltap.vhd                                          ;             ;
 ; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; /home/gabriel/intelFPGA_lite/19.1/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                     ;             ;
 ; sld_ela_control.vhd                                                ; yes             ; Encrypted Megafunction                       ; /home/gabriel/intelFPGA_lite/19.1/quartus/libraries/megafunctions/sld_ela_control.vhd                                        ;             ;
@@ -201,7 +208,7 @@ https://fpgasoftware.intel.com/eula.
 ; altrom.inc                                                         ; yes             ; Megafunction                                 ; /home/gabriel/intelFPGA_lite/19.1/quartus/libraries/megafunctions/altrom.inc                                                 ;             ;
 ; altram.inc                                                         ; yes             ; Megafunction                                 ; /home/gabriel/intelFPGA_lite/19.1/quartus/libraries/megafunctions/altram.inc                                                 ;             ;
 ; altdpram.inc                                                       ; yes             ; Megafunction                                 ; /home/gabriel/intelFPGA_lite/19.1/quartus/libraries/megafunctions/altdpram.inc                                               ;             ;
-; db/altsyncram_o124.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/altsyncram_o124.tdf                                             ;             ;
+; db/altsyncram_o124.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/altsyncram_o124.tdf                                             ;             ;
 ; altdpram.tdf                                                       ; yes             ; Megafunction                                 ; /home/gabriel/intelFPGA_lite/19.1/quartus/libraries/megafunctions/altdpram.tdf                                               ;             ;
 ; memmodes.inc                                                       ; yes             ; Megafunction                                 ; /home/gabriel/intelFPGA_lite/19.1/quartus/libraries/others/maxplus2/memmodes.inc                                             ;             ;
 ; a_hdffe.inc                                                        ; yes             ; Megafunction                                 ; /home/gabriel/intelFPGA_lite/19.1/quartus/libraries/megafunctions/a_hdffe.inc                                                ;             ;
@@ -211,32 +218,34 @@ https://fpgasoftware.intel.com/eula.
 ; muxlut.inc                                                         ; yes             ; Megafunction                                 ; /home/gabriel/intelFPGA_lite/19.1/quartus/libraries/megafunctions/muxlut.inc                                                 ;             ;
 ; bypassff.inc                                                       ; yes             ; Megafunction                                 ; /home/gabriel/intelFPGA_lite/19.1/quartus/libraries/megafunctions/bypassff.inc                                               ;             ;
 ; altshift.inc                                                       ; yes             ; Megafunction                                 ; /home/gabriel/intelFPGA_lite/19.1/quartus/libraries/megafunctions/altshift.inc                                               ;             ;
-; db/mux_ssc.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/mux_ssc.tdf                                                     ;             ;
+; db/mux_ssc.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/mux_ssc.tdf                                                     ;             ;
 ; lpm_decode.tdf                                                     ; yes             ; Megafunction                                 ; /home/gabriel/intelFPGA_lite/19.1/quartus/libraries/megafunctions/lpm_decode.tdf                                             ;             ;
 ; declut.inc                                                         ; yes             ; Megafunction                                 ; /home/gabriel/intelFPGA_lite/19.1/quartus/libraries/megafunctions/declut.inc                                                 ;             ;
 ; lpm_compare.inc                                                    ; yes             ; Megafunction                                 ; /home/gabriel/intelFPGA_lite/19.1/quartus/libraries/megafunctions/lpm_compare.inc                                            ;             ;
-; db/decode_dvf.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/decode_dvf.tdf                                                  ;             ;
+; db/decode_dvf.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/decode_dvf.tdf                                                  ;             ;
 ; lpm_counter.tdf                                                    ; yes             ; Megafunction                                 ; /home/gabriel/intelFPGA_lite/19.1/quartus/libraries/megafunctions/lpm_counter.tdf                                            ;             ;
 ; lpm_add_sub.inc                                                    ; yes             ; Megafunction                                 ; /home/gabriel/intelFPGA_lite/19.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                            ;             ;
 ; cmpconst.inc                                                       ; yes             ; Megafunction                                 ; /home/gabriel/intelFPGA_lite/19.1/quartus/libraries/megafunctions/cmpconst.inc                                               ;             ;
 ; lpm_counter.inc                                                    ; yes             ; Megafunction                                 ; /home/gabriel/intelFPGA_lite/19.1/quartus/libraries/megafunctions/lpm_counter.inc                                            ;             ;
 ; alt_counter_stratix.inc                                            ; yes             ; Megafunction                                 ; /home/gabriel/intelFPGA_lite/19.1/quartus/libraries/megafunctions/alt_counter_stratix.inc                                    ;             ;
-; db/cntr_i6j.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/cntr_i6j.tdf                                                    ;             ;
-; db/cntr_egi.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/cntr_egi.tdf                                                    ;             ;
-; db/cmpr_qgc.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/cmpr_qgc.tdf                                                    ;             ;
-; db/cntr_23j.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/cntr_23j.tdf                                                    ;             ;
-; db/cmpr_ngc.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/cmpr_ngc.tdf                                                    ;             ;
+; db/cntr_i6j.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/cntr_i6j.tdf                                                    ;             ;
+; db/cntr_egi.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/cntr_egi.tdf                                                    ;             ;
+; db/cmpr_qgc.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/cmpr_qgc.tdf                                                    ;             ;
+; db/cntr_23j.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/cntr_23j.tdf                                                    ;             ;
+; db/cmpr_ngc.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/cmpr_ngc.tdf                                                    ;             ;
 ; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; /home/gabriel/intelFPGA_lite/19.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                             ;             ;
 ; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; /home/gabriel/intelFPGA_lite/19.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                              ;             ;
 ; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; /home/gabriel/intelFPGA_lite/19.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                          ;             ;
 ; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; /home/gabriel/intelFPGA_lite/19.1/quartus/libraries/megafunctions/sld_hub.vhd                                                ; altera_sld  ;
-; db/ip/slddf4920d8/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/ip/slddf4920d8/alt_sld_fab.v                                    ; alt_sld_fab ;
-; db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
-; db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
-; db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
-; db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
-; db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
+; db/ip/slddf4920d8/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/ip/slddf4920d8/alt_sld_fab.v                                    ; alt_sld_fab ;
+; db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
+; db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
+; db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
+; db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
+; db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
 ; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; /home/gabriel/intelFPGA_lite/19.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                           ;             ;
+; 4bit_and.bdf                                                       ; yes             ; Auto-Found Block Diagram/Schematic File      ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/4bit_and.bdf                                                       ;             ;
+; 4bit_multiplier.bdf                                                ; yes             ; Auto-Found Block Diagram/Schematic File      ; /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/4bit_multiplier.bdf                                                ;             ;
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+-------------+
 
 
@@ -245,31 +254,31 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 576                      ;
+; Estimated Total logic elements              ; 577                      ;
 ;                                             ;                          ;
 ; Total combinational functions               ; 451                      ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 199                      ;
-;     -- 3 input functions                    ; 119                      ;
-;     -- <=2 input functions                  ; 133                      ;
+;     -- 4 input functions                    ; 183                      ;
+;     -- 3 input functions                    ; 134                      ;
+;     -- <=2 input functions                  ; 134                      ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
 ;     -- normal mode                          ; 382                      ;
 ;     -- arithmetic mode                      ; 69                       ;
 ;                                             ;                          ;
-; Total registers                             ; 369                      ;
-;     -- Dedicated logic registers            ; 369                      ;
+; Total registers                             ; 380                      ;
+;     -- Dedicated logic registers            ; 380                      ;
 ;     -- I/O registers                        ; 0                        ;
 ;                                             ;                          ;
-; I/O pins                                    ; 24                       ;
+; I/O pins                                    ; 23                       ;
 ; Total memory bits                           ; 128                      ;
 ;                                             ;                          ;
 ; Embedded Multiplier 9-bit elements          ; 0                        ;
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 286                      ;
-; Total fan-out                               ; 2725                     ;
-; Average fan-out                             ; 3.10                     ;
+; Total fan-out                               ; 2755                     ;
+; Average fan-out                             ; 3.11                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -278,25 +287,21 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                             ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |bcd                                                                                                                                    ; 451 (2)             ; 369 (0)                   ; 128         ; 0            ; 0       ; 0         ; 24   ; 0            ; |bcd                                                                                                                                                                                                                                                                                                                                            ; bcd                               ; work         ;
-;    |4bit_adder:inst|                                                                                                                    ; 3 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|4bit_adder:inst                                                                                                                                                                                                                                                                                                                            ; 4bit_adder                        ; work         ;
-;       |full_bit_adder:inst3|                                                                                                            ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|4bit_adder:inst|full_bit_adder:inst3                                                                                                                                                                                                                                                                                                       ; full_bit_adder                    ; work         ;
-;       |full_bit_adder:inst|                                                                                                             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|4bit_adder:inst|full_bit_adder:inst                                                                                                                                                                                                                                                                                                        ; full_bit_adder                    ; work         ;
-;    |4bit_conditional_not:inst10|                                                                                                        ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|4bit_conditional_not:inst10                                                                                                                                                                                                                                                                                                                ; 4bit_conditional_not              ; work         ;
-;    |4bit_multiplier:inst3|                                                                                                              ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|4bit_multiplier:inst3                                                                                                                                                                                                                                                                                                                      ; 4bit_multiplier                   ; work         ;
-;       |4bit_adder:inst2|                                                                                                                ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|4bit_multiplier:inst3|4bit_adder:inst2                                                                                                                                                                                                                                                                                                     ; 4bit_adder                        ; work         ;
-;          |full_bit_adder:inst3|                                                                                                         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|4bit_multiplier:inst3|4bit_adder:inst2|full_bit_adder:inst3                                                                                                                                                                                                                                                                                ; full_bit_adder                    ; work         ;
-;          |full_bit_adder:inst4|                                                                                                         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|4bit_multiplier:inst3|4bit_adder:inst2|full_bit_adder:inst4                                                                                                                                                                                                                                                                                ; full_bit_adder                    ; work         ;
-;       |4bit_adder:inst8|                                                                                                                ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|4bit_multiplier:inst3|4bit_adder:inst8                                                                                                                                                                                                                                                                                                     ; 4bit_adder                        ; work         ;
-;          |full_bit_adder:inst4|                                                                                                         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|4bit_multiplier:inst3|4bit_adder:inst8|full_bit_adder:inst4                                                                                                                                                                                                                                                                                ; full_bit_adder                    ; work         ;
-;          |full_bit_adder:inst5|                                                                                                         ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|4bit_multiplier:inst3|4bit_adder:inst8|full_bit_adder:inst5                                                                                                                                                                                                                                                                                ; full_bit_adder                    ; work         ;
-;       |enable:inst6|                                                                                                                    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|4bit_multiplier:inst3|enable:inst6                                                                                                                                                                                                                                                                                                         ; enable                            ; work         ;
-;       |enable:inst|                                                                                                                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|4bit_multiplier:inst3|enable:inst                                                                                                                                                                                                                                                                                                          ; enable                            ; work         ;
-;    |4bit_or:inst13|                                                                                                                     ; 13 (13)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|4bit_or:inst13                                                                                                                                                                                                                                                                                                                             ; 4bit_or                           ; work         ;
-;    |box:inst8|                                                                                                                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|box:inst8                                                                                                                                                                                                                                                                                                                                  ; box                               ; work         ;
-;    |enable:inst5|                                                                                                                       ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|enable:inst5                                                                                                                                                                                                                                                                                                                               ; enable                            ; work         ;
-;    |enable:inst6|                                                                                                                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|enable:inst6                                                                                                                                                                                                                                                                                                                               ; enable                            ; work         ;
-;    |enable:inst7|                                                                                                                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|enable:inst7                                                                                                                                                                                                                                                                                                                               ; enable                            ; work         ;
+; |bcd                                                                                                                                    ; 451 (16)            ; 380 (0)                   ; 128         ; 0            ; 0       ; 0         ; 23   ; 0            ; |bcd                                                                                                                                                                                                                                                                                                                                            ; bcd                               ; work         ;
+;    |4bit_or:inst54|                                                                                                                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|4bit_or:inst54                                                                                                                                                                                                                                                                                                                             ; 4bit_or                           ; work         ;
+;    |4bit_or:inst56|                                                                                                                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|4bit_or:inst56                                                                                                                                                                                                                                                                                                                             ; 4bit_or                           ; work         ;
+;    |4bit_or:inst60|                                                                                                                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|4bit_or:inst60                                                                                                                                                                                                                                                                                                                             ; 4bit_or                           ; work         ;
+;    |box:inst8|                                                                                                                          ; 18 (18)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|box:inst8                                                                                                                                                                                                                                                                                                                                  ; box                               ; work         ;
+;    |loader:inst7|                                                                                                                       ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|loader:inst7                                                                                                                                                                                                                                                                                                                               ; loader                            ; work         ;
+;    |mux_d:inst14|                                                                                                                       ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|mux_d:inst14                                                                                                                                                                                                                                                                                                                               ; mux_d                             ; work         ;
+;    |mux_d:inst15|                                                                                                                       ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|mux_d:inst15                                                                                                                                                                                                                                                                                                                               ; mux_d                             ; work         ;
+;    |mux_d:inst16|                                                                                                                       ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|mux_d:inst16                                                                                                                                                                                                                                                                                                                               ; mux_d                             ; work         ;
+;    |mux_d:inst17|                                                                                                                       ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|mux_d:inst17                                                                                                                                                                                                                                                                                                                               ; mux_d                             ; work         ;
+;    |mux_d:inst18|                                                                                                                       ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|mux_d:inst18                                                                                                                                                                                                                                                                                                                               ; mux_d                             ; work         ;
+;    |mux_d:inst20|                                                                                                                       ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|mux_d:inst20                                                                                                                                                                                                                                                                                                                               ; mux_d                             ; work         ;
+;    |mux_d:inst21|                                                                                                                       ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|mux_d:inst21                                                                                                                                                                                                                                                                                                                               ; mux_d                             ; work         ;
+;    |mux_d:inst23|                                                                                                                       ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|mux_d:inst23                                                                                                                                                                                                                                                                                                                               ; mux_d                             ; work         ;
+;    |mux_d:inst26|                                                                                                                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|mux_d:inst26                                                                                                                                                                                                                                                                                                                               ; mux_d                             ; work         ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 124 (1)             ; 90 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
 ;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 123 (0)             ; 90 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
 ;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 123 (0)             ; 90 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bcd|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
@@ -369,10 +374,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 369   ;
+; Total registers                              ; 380   ;
 ; Number of registers using Synchronous Clear  ; 48    ;
-; Number of registers using Synchronous Load   ; 58    ;
-; Number of registers using Asynchronous Clear ; 132   ;
+; Number of registers using Synchronous Load   ; 66    ;
+; Number of registers using Asynchronous Clear ; 134   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 262   ;
 ; Number of registers using Preset             ; 0     ;
@@ -384,6 +389,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                                                                                                                                                                                                                                                                               ; Fan out ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; loader:inst7|inst                                                                                                                                                                                                                                                                                                               ; 9       ;
+; loader:inst7|inst6                                                                                                                                                                                                                                                                                                              ; 3       ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[2] ; 2       ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[1] ; 3       ;
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[1]                                                                                                                                                   ; 1       ;
@@ -394,7 +401,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[6]                                                                                                                                                   ; 1       ;
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[7]                                                                                                                                                   ; 1       ;
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[0]                                                                                                                                                   ; 1       ;
-; Total number of inverted registers = 10                                                                                                                                                                                                                                                                                         ;         ;
+; Total number of inverted registers = 12                                                                                                                                                                                                                                                                                         ;         ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -487,16 +494,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 23                          ;
-; cycloneiii_lcell_comb ; 45                          ;
-;     normal            ; 45                          ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 8                           ;
-;         3 data inputs ; 2                           ;
-;         4 data inputs ; 34                          ;
+; boundary_port         ; 22                          ;
+; cycloneiii_ff         ; 11                          ;
+;     CLR               ; 2                           ;
+;     SLD               ; 8                           ;
+;     plain             ; 1                           ;
+; cycloneiii_lcell_comb ; 46                          ;
+;     normal            ; 46                          ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 17                          ;
+;         4 data inputs ; 18                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 5.86                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.35                        ;
 +-----------------------+-----------------------------+
 
 
@@ -505,7 +516,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -558,7 +569,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Mon Oct  2 19:38:27 2023
+    Info: Processing started: Wed Oct 18 19:06:52 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off bcd -c bcd
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -578,41 +589,65 @@ Info (12021): Found 1 design units, including 1 entities, in source file enable.
     Info (12023): Found entity 1: enable
 Info (12021): Found 1 design units, including 1 entities, in source file 4bit_conditional_not.bdf
     Info (12023): Found entity 1: 4bit_conditional_not
+Info (12021): Found 1 design units, including 1 entities, in source file mux_d.bdf
+    Info (12023): Found entity 1: mux_d
+Info (12021): Found 1 design units, including 1 entities, in source file 1_en.bdf
+    Info (12023): Found entity 1: 1_en
+Info (12021): Found 1 design units, including 1 entities, in source file 2_en.bdf
+    Info (12023): Found entity 1: 2_en
+Info (12021): Found 1 design units, including 1 entities, in source file 3_en.bdf
+    Info (12023): Found entity 1: 3_en
+Info (12021): Found 1 design units, including 1 entities, in source file 4_en.bdf
+    Info (12023): Found entity 1: 4_en
+Info (12021): Found 1 design units, including 1 entities, in source file 5_en.bdf
+    Info (12023): Found entity 1: 5_en
+Info (12021): Found 1 design units, including 1 entities, in source file 7_en.bdf
+    Info (12023): Found entity 1: 7_en
+Info (12021): Found 1 design units, including 1 entities, in source file 8_en.bdf
+    Info (12023): Found entity 1: 8_en
+Info (12021): Found 1 design units, including 1 entities, in source file 0_en.bdf
+    Info (12023): Found entity 1: 0_en
+Info (12021): Found 1 design units, including 1 entities, in source file off_en.bdf
+    Info (12023): Found entity 1: off_en
+Info (12021): Found 1 design units, including 1 entities, in source file loader.bdf
+    Info (12023): Found entity 1: loader
 Info (12127): Elaborating entity "bcd" for the top level hierarchy
-Warning (12125): Using design file 4bit_or.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: 4bit_or
-Info (12128): Elaborating entity "4bit_or" for hierarchy "4bit_or:inst13"
-Info (12128): Elaborating entity "enable" for hierarchy "enable:inst5"
-Info (12128): Elaborating entity "4bit_adder" for hierarchy "4bit_adder:inst"
-Info (12128): Elaborating entity "full_bit_adder" for hierarchy "4bit_adder:inst|full_bit_adder:inst"
-Info (12128): Elaborating entity "4bit_conditional_not" for hierarchy "4bit_conditional_not:inst10"
-Warning (12125): Using design file 4bit_and.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: 4bit_and
-Info (12128): Elaborating entity "4bit_and" for hierarchy "4bit_and:inst1"
-Warning (12125): Using design file 4bit_multiplier.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: 4bit_multiplier
-Info (12128): Elaborating entity "4bit_multiplier" for hierarchy "4bit_multiplier:inst3"
 Info (12128): Elaborating entity "box" for hierarchy "box:inst8"
 Warning (275008): Primitive "NOT" of instance "inst" not used
+Warning (12125): Using design file 4bit_or.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: 4bit_or
+Info (12128): Elaborating entity "4bit_or" for hierarchy "4bit_or:inst61"
+Info (12128): Elaborating entity "2_en" for hierarchy "2_en:inst"
+Info (12128): Elaborating entity "enable" for hierarchy "2_en:inst|enable:inst"
+Info (12128): Elaborating entity "loader" for hierarchy "loader:inst7"
+Info (12128): Elaborating entity "mux_d" for hierarchy "mux_d:inst23"
+Info (12128): Elaborating entity "8_en" for hierarchy "8_en:inst49"
+Info (12128): Elaborating entity "3_en" for hierarchy "3_en:inst51"
+Info (12128): Elaborating entity "4_en" for hierarchy "4_en:inst62"
+Info (12128): Elaborating entity "5_en" for hierarchy "5_en:inst63"
+Info (12128): Elaborating entity "1_en" for hierarchy "1_en:inst65"
+Info (12128): Elaborating entity "0_en" for hierarchy "0_en:inst66"
+Info (12128): Elaborating entity "7_en" for hierarchy "7_en:inst68"
+Info (12128): Elaborating entity "off_en" for hierarchy "off_en:inst69"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_o124.tdf
-    Info (12023): Found entity 1: altsyncram_o124 File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/altsyncram_o124.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_o124 File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/altsyncram_o124.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_ssc.tdf
-    Info (12023): Found entity 1: mux_ssc File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/mux_ssc.tdf Line: 23
+    Info (12023): Found entity 1: mux_ssc File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/mux_ssc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_dvf.tdf
-    Info (12023): Found entity 1: decode_dvf File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/decode_dvf.tdf Line: 23
+    Info (12023): Found entity 1: decode_dvf File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/decode_dvf.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_i6j.tdf
-    Info (12023): Found entity 1: cntr_i6j File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/cntr_i6j.tdf Line: 26
+    Info (12023): Found entity 1: cntr_i6j File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/cntr_i6j.tdf Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_egi.tdf
-    Info (12023): Found entity 1: cntr_egi File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/cntr_egi.tdf Line: 28
+    Info (12023): Found entity 1: cntr_egi File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/cntr_egi.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_qgc.tdf
-    Info (12023): Found entity 1: cmpr_qgc File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/cmpr_qgc.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_qgc File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/cmpr_qgc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_23j.tdf
-    Info (12023): Found entity 1: cntr_23j File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/cntr_23j.tdf Line: 28
+    Info (12023): Found entity 1: cntr_23j File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/cntr_23j.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_ngc.tdf
-    Info (12023): Found entity 1: cmpr_ngc File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/cmpr_ngc.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_ngc File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/cmpr_ngc.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2023.10.02.19:38:38 Progress: Loading slddf4920d8/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2023.10.18.19:07:03 Progress: Loading slddf4920d8/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -623,31 +658,33 @@ Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification
 Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
 Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/slddf4920d8/alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/ip/slddf4920d8/alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/ip/slddf4920d8/alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_ident.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
-    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_6/db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: /home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_7/db/ip/slddf4920d8/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Critical Warning (35025): Partially connected in-system debug instance "auto_signaltap_0" to 33 of its 35 required data inputs, trigger inputs, acquisition clocks, and dynamic pins.  There were 0 illegal, 0 inaccessible, and 2 missing sources or connections.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 620 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 16 input pins
-    Info (21059): Implemented 12 output pins
-    Info (21061): Implemented 590 logic cells
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 20 output pins
+    Info (21061): Implemented 591 logic cells
     Info (21064): Implemented 1 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1013 megabytes
-    Info: Processing ended: Mon Oct  2 19:38:45 2023
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:38
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 1059 megabytes
+    Info: Processing ended: Wed Oct 18 19:07:11 2023
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:35
 
 

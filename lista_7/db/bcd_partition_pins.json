@@ -4,22 +4,6 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "o_LSB",
-					"strict" : false
-				},
-				{
-					"name" : "o_1",
-					"strict" : false
-				},
-				{
-					"name" : "o_2",
-					"strict" : false
-				},
-				{
-					"name" : "o_MSB",
-					"strict" : false
-				},
-				{
 					"name" : "a",
 					"strict" : false
 				},
@@ -48,51 +32,63 @@
 					"strict" : false
 				},
 				{
-					"name" : "a_LSB",
+					"name" : "o_1",
 					"strict" : false
 				},
 				{
-					"name" : "b_LSB",
+					"name" : "o_2",
 					"strict" : false
 				},
 				{
-					"name" : "bb",
+					"name" : "o_3",
 					"strict" : false
 				},
 				{
-					"name" : "sel_1",
+					"name" : "o_4",
 					"strict" : false
 				},
 				{
-					"name" : "sel_0",
+					"name" : "o_5",
 					"strict" : false
 				},
 				{
-					"name" : "c_in",
+					"name" : "o_6",
 					"strict" : false
 				},
 				{
-					"name" : "a_1",
+					"name" : "o_7",
 					"strict" : false
 				},
 				{
-					"name" : "b_1",
+					"name" : "o_8",
 					"strict" : false
 				},
 				{
-					"name" : "a_2",
+					"name" : "o_9",
 					"strict" : false
 				},
 				{
-					"name" : "b_2",
+					"name" : "o_10",
 					"strict" : false
 				},
 				{
-					"name" : "b_MSB",
+					"name" : "o_clk",
 					"strict" : false
 				},
 				{
-					"name" : "a_MSB",
+					"name" : "o_pre",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "sel_LSB",
+					"strict" : false
+				},
+				{
+					"name" : "sel_MSB",
 					"strict" : false
 				},
 				{
