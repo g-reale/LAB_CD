@@ -1,0 +1,18 @@
+Quartus Prime Archive log --	/home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_4/assync/assync.qarlog
+
+Archive:	/home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_4/assync/assync.qar
+Date:		Thu Sep 21 18:47:07 2023
+Quartus Prime		19.1.0 Build 670 09/22/2019 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_4/assync/bcd.bdf
+/home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_4/assync/bcd.qpf
+/home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_4/assync/bcd.qsf
+/home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_4/assync/bcd_assignment_defaults.qdf
+/home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_4/assync/box.bdf
+/home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_4/assync/db/stp1_auto_stripped.stp
+/home/gabriel/Documents/Unifesp/LAB_CD/Schematics/lista_4/assync/stp1.stp
+	======= Total: 7 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

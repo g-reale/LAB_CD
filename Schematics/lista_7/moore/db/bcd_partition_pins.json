@@ -1,0 +1,113 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "a",
+					"strict" : false
+				},
+				{
+					"name" : "b",
+					"strict" : false
+				},
+				{
+					"name" : "c",
+					"strict" : false
+				},
+				{
+					"name" : "d",
+					"strict" : false
+				},
+				{
+					"name" : "e",
+					"strict" : false
+				},
+				{
+					"name" : "f",
+					"strict" : false
+				},
+				{
+					"name" : "g",
+					"strict" : false
+				},
+				{
+					"name" : "o_1",
+					"strict" : false
+				},
+				{
+					"name" : "o_2",
+					"strict" : false
+				},
+				{
+					"name" : "o_3",
+					"strict" : false
+				},
+				{
+					"name" : "o_4",
+					"strict" : false
+				},
+				{
+					"name" : "o_5",
+					"strict" : false
+				},
+				{
+					"name" : "o_6",
+					"strict" : false
+				},
+				{
+					"name" : "o_7",
+					"strict" : false
+				},
+				{
+					"name" : "o_8",
+					"strict" : false
+				},
+				{
+					"name" : "o_9",
+					"strict" : false
+				},
+				{
+					"name" : "o_10",
+					"strict" : false
+				},
+				{
+					"name" : "o_clk",
+					"strict" : false
+				},
+				{
+					"name" : "sel_LSB",
+					"strict" : false
+				},
+				{
+					"name" : "sel_MSB",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "clk_FPGA",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

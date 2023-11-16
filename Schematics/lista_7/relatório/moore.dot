@@ -1,0 +1,65 @@
+
+digraph MooreMachine {
+
+    //Choose engine. Use one of: circo dot fdp neato nop nop1 nop2 osage patchwork sfdp twopi
+    layout=sfdp;
+
+    // Define states
+    A [shape=circle, color=green, label="A / 2 0b0010"];
+    B [shape=circle, color=blue, label="B / 8 0b1000"];
+    C [shape=circle, color=blue, label="C / 3 0b0011"];
+    D [shape=circle, color=blue, label="D / 4 0b0100"];
+    E [shape=circle, color=blue, label="E / 5 0b0101"];
+    F [shape=circle, color=blue, label="F / 4 0b0100"];
+    G [shape=circle, color=blue, label="G / 1 0b0001"];
+    H [shape=circle, color=blue, label="H / 0 0b0000"];
+    I [shape=circle, color=blue, label="I / 7 0b0111"];
+    OFF [shape=circle, color=red, label="OFF / 16 0b1111"];
+    
+    // Define transitions
+
+    A -> A [label="00",labelfloat=true];
+    B -> B [label="00",labelfloat=true];
+    C -> C [label="00",labelfloat=true];
+    D -> D [label="00",labelfloat=true];
+    E -> E [label="00",labelfloat=true];
+    F -> F [label="00",labelfloat=true];
+    G -> G [label="00",labelfloat=true];
+    H -> H [label="00",labelfloat=true];
+    I -> I [label="00",labelfloat=true];
+    OFF -> OFF [label="00",labelfloat=true];
+
+    A -> I [label="01"];
+    B -> A [label="01"];
+    C -> B [label="01"];
+    D -> C [label="01"];
+    E -> D [label="01"];
+    F -> E [label="01"];
+    G -> F [label="01"];
+    H -> G [label="01"];
+    I -> H [label="01"];
+    OFF -> A [label="01"];
+    
+    A -> B [label="10"];
+    B -> C [label="10"];
+    C -> D [label="10"];
+    D -> E [label="10"];
+    E -> F [label="10"];
+    F -> G [label="10"];
+    G -> H [label="10"];
+    H -> I [label="10"];
+    I -> A [label="10"];
+    OFF -> A [label="10"];
+
+
+    A -> OFF [label="11"];
+    B -> OFF [label="11"];
+    C -> OFF [label="11"];
+    D -> OFF [label="11"];
+    E -> OFF [label="11"];
+    F -> OFF [label="11"];
+    G -> OFF [label="11"];
+    H -> OFF [label="11"];
+    I -> OFF [label="11"];
+    OFF -> OFF [label="11"];
+}

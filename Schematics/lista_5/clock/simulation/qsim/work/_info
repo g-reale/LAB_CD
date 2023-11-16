@@ -1,0 +1,73 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/aluno/lab_cd_gabriel_reale/LAB_CD/lista_3/simulation/qsim
+vbcd
+Z1 !s110 1694819384
+!i10b 1
+!s100 hAlSi4`_1?Q?OhPHY;a<[3
+I_`:WFdQUi9Ah1M33jGc4g2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1694819381
+Z4 8bcd.vo
+Z5 Fbcd.vo
+L0 31
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1694819383.000000
+Z8 !s107 bcd.vo|
+Z9 !s90 -work|work|bcd.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vbcd_vlg_vec_tst
+R1
+!i10b 1
+!s100 IO0ja5HfJDOQ;>jm?YYIc0
+Id65QGUhdG[?aZP8SG^1ab0
+R2
+R0
+w1694819379
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R6
+r1
+!s85 0
+31
+!s108 1694819384.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+R11
+vhard_block
+R1
+!i10b 1
+!s100 @EL[O6?`jTdZ>C7Y`^RWD0
+Ic2HWaeQ?jmGM1a0:HDO<73
+R2
+R0
+R3
+R4
+R5
+L0 371
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11

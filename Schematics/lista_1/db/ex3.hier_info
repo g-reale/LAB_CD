@@ -1,0 +1,13 @@
+|ex3
+S <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => inst.IN0
+IN1 => inst6.IN0
+IN1 => inst4.IN0
+IN2 => inst1.IN0
+IN2 => inst5.IN1
+IN2 => inst6.IN2
+IN2 => inst4.IN1
+IN3 => inst2.IN0
+IN3 => inst4.IN2
+
+
