@@ -1,0 +1,16 @@
+|sync
+rst => counter.OUTPUTSELECT
+rst => counter.OUTPUTSELECT
+rst => counter.OUTPUTSELECT
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+a << segments.DB_MAX_OUTPUT_PORT_TYPE
+b << segments.DB_MAX_OUTPUT_PORT_TYPE
+c << Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+d << WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+e << WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+f << WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+g << WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+
+

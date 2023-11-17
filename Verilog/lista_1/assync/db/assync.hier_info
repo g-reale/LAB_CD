@@ -1,0 +1,14 @@
+|assync
+rst => counter[2].PRESET
+rst => counter[1].PRESET
+rst => counter[0].PRESET
+clk => counter[0].CLK
+a <= segments.DB_MAX_OUTPUT_PORT_TYPE
+b <= segments.DB_MAX_OUTPUT_PORT_TYPE
+c <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+d <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+e <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+f <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+g <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+
+

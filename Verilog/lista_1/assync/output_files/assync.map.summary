@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Nov 17 20:15:01 2023
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Standard Edition
+Revision Name : assync
+Top-level Entity Name : assync
+Family : Cyclone IV E
+Total logic elements : 10
+    Total combinational functions : 10
+    Dedicated logic registers : 3
+Total registers : 3
+Total pins : 9
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
