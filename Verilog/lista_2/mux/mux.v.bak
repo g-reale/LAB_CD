@@ -1,16 +1,28 @@
-module auto(V_SW,G_HEX4,CLOCK_50);
+module mux(sel1,sel0,clk,rst,a,b,c,d,e,f,g);
     
-    input [17:17]V_SW;
-    input CLOCK_50;
-    output wire [0:6] G_HEX4;
-    
+	 input clk,rst;
+	 input sel1,sel0;
+	 output wire a,b,c,d,e,f,g;
+	 
     reg [6:0]segments;
     reg [2:0]counter;
-    reg [25:0] divider;
+    reg [28:0]divider;
+    reg [28:0]times;
+    
     reg spike;
     
-    always@(posedge CLOCK_50) begin
-        if(divider == 26'd50000000) begin
+    always@(sel1 or sel0)begin
+        case ({sel1,sel0})
+            2'd0: times = 29'd25000000;
+            2'd1: times = 29'd50000000;
+            2'd2: times = 29'd100000000;
+            2'd3: times = 29'd300000000;
+            default: times = 29'd50000000;
+        endcase
+    end
+    
+    always@(posedge clk) begin
+        if(divider >= times) begin
             spike <= 1;
             divider <= 0;
         end else begin
@@ -19,8 +31,8 @@ module auto(V_SW,G_HEX4,CLOCK_50);
         end
     end
     
-    always@(posedge spike or posedge V_SW[17]) begin
-        if(V_SW[17])
+    always@(posedge spike or posedge V_SW[0]) begin
+        if(V_SW[0])
             counter <= 0;
         else
             counter <= counter + 1;
@@ -39,6 +51,6 @@ module auto(V_SW,G_HEX4,CLOCK_50);
             default: segments = 7'b1111111; //off
         endcase
     
-    assign G_HEX4 = segments;
+    assign 	{a,b,c,d,e,f,g} = segments;
     
 endmodule

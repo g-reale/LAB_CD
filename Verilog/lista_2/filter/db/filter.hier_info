@@ -1,0 +1,18 @@
+|filter
+clk => always0.IN1
+clk => filter.OUTPUTSELECT
+clk => filter.OUTPUTSELECT
+auto_clk => filter[0].CLK
+auto_clk => filter[1].CLK
+rst => counter[0].ACLR
+rst => counter[1].ACLR
+rst => counter[2].ACLR
+a << segments.DB_MAX_OUTPUT_PORT_TYPE
+b << segments.DB_MAX_OUTPUT_PORT_TYPE
+c << Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+d << WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+e << WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+f << WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+g << WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+
+

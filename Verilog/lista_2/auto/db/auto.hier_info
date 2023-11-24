@@ -1,0 +1,40 @@
+|auto
+rst => counter[0].ACLR
+rst => counter[1].ACLR
+rst => counter[2].ACLR
+clk => divider[0].CLK
+clk => divider[1].CLK
+clk => divider[2].CLK
+clk => divider[3].CLK
+clk => divider[4].CLK
+clk => divider[5].CLK
+clk => divider[6].CLK
+clk => divider[7].CLK
+clk => divider[8].CLK
+clk => divider[9].CLK
+clk => divider[10].CLK
+clk => divider[11].CLK
+clk => divider[12].CLK
+clk => divider[13].CLK
+clk => divider[14].CLK
+clk => divider[15].CLK
+clk => divider[16].CLK
+clk => divider[17].CLK
+clk => divider[18].CLK
+clk => divider[19].CLK
+clk => divider[20].CLK
+clk => divider[21].CLK
+clk => divider[22].CLK
+clk => divider[23].CLK
+clk => divider[24].CLK
+clk => divider[25].CLK
+clk => spike.CLK
+a << segments.DB_MAX_OUTPUT_PORT_TYPE
+b << segments.DB_MAX_OUTPUT_PORT_TYPE
+c << Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+d << WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+e << WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+f << WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+g << WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+
+

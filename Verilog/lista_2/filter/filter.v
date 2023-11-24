@@ -1,26 +1,23 @@
-module auto(V_SW,G_HEX4,CLOCK_50);
+module filter(clk,auto_clk,rst,a,b,c,d,e,f,g);
     
-    input [17:17]V_SW;
-    input CLOCK_50;
-    output wire [0:6] G_HEX4;
+    input rst;
+    input clk;
+    input auto_clk;
+    output wire a,b,c,d,e,f,g;
     
     reg [6:0]segments;
     reg [2:0]counter;
-    reg [25:0] divider;
-    reg spike;
+    reg [1:0]filter;
     
-    always@(posedge CLOCK_50) begin
-        if(divider == 26'd50000000) begin
-            spike <= 1;
-            divider <= 0;
-        end else begin
-            spike <= 0;
-            divider <= divider + 1;
-        end
+    always@(posedge auto_clk) begin
+        if(clk && filter < 2'd2)
+            filter <= filter + 1;
+        else if (!clk)
+            filter <= 0;
     end
     
-    always@(posedge spike or posedge V_SW[17]) begin
-        if(V_SW[17])
+    always@(posedge filter[1] or posedge rst) begin
+        if(rst)
             counter <= 0;
         else
             counter <= counter + 1;
@@ -39,6 +36,6 @@ module auto(V_SW,G_HEX4,CLOCK_50);
             default: segments = 7'b1111111; //off
         endcase
     
-    assign G_HEX4 = segments;
+    assign {a,b,c,d,e,f,g} = segments;
     
 endmodule
