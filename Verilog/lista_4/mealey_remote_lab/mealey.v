@@ -1,9 +1,12 @@
-module mealey(sel1,sel0,rst,clk,a,b,c,d,e,f,g,db0,db1,db2,db3,db4);
+module mealey(
+    V_SW,
+    CLOCK_50,
+    G_HEX0,
+);
     
-	 input wire rst,clk;
-	 input wire sel1,sel0;
-	 output a,b,c,d,e,f,g;
-	 output db0,db1,db2,db3,db4;
+     input [17:0]V_SW;
+	 input CLOCK_50;
+	 output [6:0]G_HEX0;
 	 
 	 parameter A = 4'd0, B = 4'd1, C = 4'd2, D = 4'd3, E = 4'd4, F = 4'd5, G = 4'd6, H = 4'd7, I = 4'd8, J = 4'd9;
 	 parameter S0 = 7'b0000001,S1 = 7'b1001111, S2 = 7'b0010010, S3 = 7'b0000110, S4 = 7'b1001100, S5 = 7'b0100100, S7 = 7'b0001111, S8 = 7'b0000000;
@@ -16,7 +19,7 @@ module mealey(sel1,sel0,rst,clk,a,b,c,d,e,f,g,db0,db1,db2,db3,db4);
     reg spike;
     
 	 //clk divider
-    always@(posedge clk) begin
+    always@(posedge CLOCK_50) begin
         if(divider == 26'd50000000) begin
             spike <= 1;
             divider <= 0;
@@ -27,8 +30,8 @@ module mealey(sel1,sel0,rst,clk,a,b,c,d,e,f,g,db0,db1,db2,db3,db4);
     end
 	 
 	 //next state and output
-	 always @(sel0 or sel1 or state)begin
-		if(sel1 == 0 && sel0 == 0) begin
+	 always @(V_SW[16] or V_SW[17] or state)begin
+		if(V_SW[17] == 0 && V_SW[16] == 0) begin
 			stash = state;
 			case({state[3],state[2],state[1],state[0]})
 				A: segments = S2;
@@ -45,7 +48,7 @@ module mealey(sel1,sel0,rst,clk,a,b,c,d,e,f,g,db0,db1,db2,db3,db4);
 			endcase
 		end 
 		
-		else if(sel1 == 0 && sel0 == 1) begin
+		else if(V_SW[17] == 0 && V_SW[16] == 1) begin
 			case({state[3],state[2],state[1],state[0]})
 				A: begin
 					stash = I;
@@ -84,7 +87,7 @@ module mealey(sel1,sel0,rst,clk,a,b,c,d,e,f,g,db0,db1,db2,db3,db4);
 			endcase
 		end
 			
-		else if(sel1 == 1 && sel0 == 0) begin
+		else if(V_SW[17] == 1 && V_SW[16] == 0) begin
 			case({state[3],state[2],state[1],state[0]})
 				A: begin
 					stash = B;
@@ -122,7 +125,7 @@ module mealey(sel1,sel0,rst,clk,a,b,c,d,e,f,g,db0,db1,db2,db3,db4);
 				end
 			endcase
 		end 
-		else if(sel1 == 1 && sel0 == 1) begin
+		else if(V_SW[17] == 1 && V_SW[16] == 1) begin
 			stash = J;
 			segments = SOFF;
 		end
@@ -130,15 +133,15 @@ module mealey(sel1,sel0,rst,clk,a,b,c,d,e,f,g,db0,db1,db2,db3,db4);
 	 
 	 
 	//comits or resets the state 
-	always@(posedge spike or posedge rst)begin
-		if(rst)
+	always@(posedge spike or posedge V_SW[0])begin
+		if(V_SW[0])
 			state <= 0;
 		else
 			state <= stash;
 	end
 	 
-	 assign {a,b,c,d,e,f,g} = segments;
-	 assign {db3,db2,db1,db0} = state;
-	 assign db4 = spike;
+	 assign {G_HEX0[0],G_HEX0[1],G_HEX0[2],G_HEX0[3],G_HEX0[4],G_HEX0[5],G_HEX0[6]} = segments;
+	 //assign {db3,db2,db1,db0} = state;
+	 //assign db4 = spike;
 	 
 endmodule

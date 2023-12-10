@@ -1,30 +1,24 @@
-Analysis & Synthesis report for mealey
-Fri Nov 24 23:11:29 2023
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Standard Edition
+Analysis & Elaboration report for mealey
+Sun Dec 10 19:51:30 2023
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
 ---------------------
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: Top-level Entity: |mealey
+  5. Analysis & Elaboration Settings
+  6. Analysis & Elaboration Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2019  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -41,28 +35,72 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                         ;
-+------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 24 23:11:29 2023           ;
-; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Standard Edition ;
-; Revision Name                      ; mealey                                          ;
-; Top-level Entity Name              ; mealey                                          ;
-; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 71                                              ;
-;     Total combinational functions  ; 71                                              ;
-;     Dedicated logic registers      ; 31                                              ;
-; Total registers                    ; 31                                              ;
-; Total pins                         ; 16                                              ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0                                               ;
-; Embedded Multiplier 9-bit elements ; 0                                               ;
-; Total PLLs                         ; 0                                               ;
-+------------------------------------+-------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                   ;
++------------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status      ; Successful - Sun Dec 10 19:51:30 2023       ;
+; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Revision Name                      ; mealey                                      ;
+; Top-level Entity Name              ; mealey                                      ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |mealey ;
++----------------+---------+---------------------------------------------+
+; Parameter Name ; Value   ; Type                                        ;
++----------------+---------+---------------------------------------------+
+; A              ; 0000    ; Unsigned Binary                             ;
+; B              ; 0001    ; Unsigned Binary                             ;
+; C              ; 0010    ; Unsigned Binary                             ;
+; D              ; 0011    ; Unsigned Binary                             ;
+; E              ; 0100    ; Unsigned Binary                             ;
+; F              ; 0101    ; Unsigned Binary                             ;
+; G              ; 0110    ; Unsigned Binary                             ;
+; H              ; 0111    ; Unsigned Binary                             ;
+; I              ; 1000    ; Unsigned Binary                             ;
+; J              ; 1001    ; Unsigned Binary                             ;
+; S0             ; 0000001 ; Unsigned Binary                             ;
+; S1             ; 1001111 ; Unsigned Binary                             ;
+; S2             ; 0010010 ; Unsigned Binary                             ;
+; S3             ; 0000110 ; Unsigned Binary                             ;
+; S4             ; 1001100 ; Unsigned Binary                             ;
+; S5             ; 0100100 ; Unsigned Binary                             ;
+; S7             ; 0001111 ; Unsigned Binary                             ;
+; S8             ; 0000000 ; Unsigned Binary                             ;
+; SOFF           ; 1111111 ; Unsigned Binary                             ;
++----------------+---------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                              ;
+; Analysis & Elaboration Settings                                                                            ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
@@ -147,160 +185,37 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
-+----------------------------+-------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                  ; Library ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------+---------+
-; mealey.v                         ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/LAB_CD/Verilog/lista_4/mealey/mealey.v ;         ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------+---------+
-
-
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 71        ;
-;                                             ;           ;
-; Total combinational functions               ; 71        ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 23        ;
-;     -- 3 input functions                    ; 4         ;
-;     -- <=2 input functions                  ; 44        ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 43        ;
-;     -- arithmetic mode                      ; 28        ;
-;                                             ;           ;
-; Total registers                             ; 31        ;
-;     -- Dedicated logic registers            ; 31        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 16        ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 27        ;
-; Total fan-out                               ; 285       ;
-; Average fan-out                             ; 2.13      ;
-+---------------------------------------------+-----------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |mealey                    ; 71 (71)             ; 31 (31)                   ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |mealey             ; mealey      ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 31    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 4     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |mealey|Mux3               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 16                          ;
-; cycloneiii_ff         ; 31                          ;
-;     CLR               ; 4                           ;
-;     plain             ; 27                          ;
-; cycloneiii_lcell_comb ; 73                          ;
-;     arith             ; 28                          ;
-;         2 data inputs ; 26                          ;
-;         3 data inputs ; 2                           ;
-;     normal            ; 45                          ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 17                          ;
-;         3 data inputs ; 2                           ;
-;         4 data inputs ; 23                          ;
-;                       ;                             ;
-; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 4.08                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.0 Build 711 06/05/2020 SJ Standard Edition
-    Info: Processing started: Fri Nov 24 23:11:18 2023
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mealey -c mealey
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+    Info: Processing started: Sun Dec 10 19:51:24 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mealey -c mealey --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file mealey.v
-    Info (12023): Found entity 1: mealey File: /home/aluno/Documentos/LAB_CD/Verilog/lista_4/mealey/mealey.v Line: 1
+    Info (12023): Found entity 1: mealey File: /home/gabriel/Documents/Unifesp/LAB_CD/Verilog/lista_4/mealey/mealey.v Line: 1
 Info (12127): Elaborating entity "mealey" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at mealey.v(21): truncated value with size 32 to match size of target (26) File: /home/aluno/Documentos/LAB_CD/Verilog/lista_4/mealey/mealey.v Line: 21
-Warning (10230): Verilog HDL assignment warning at mealey.v(39): truncated value with size 32 to match size of target (4) File: /home/aluno/Documentos/LAB_CD/Verilog/lista_4/mealey/mealey.v Line: 39
-Warning (10230): Verilog HDL assignment warning at mealey.v(47): truncated value with size 32 to match size of target (4) File: /home/aluno/Documentos/LAB_CD/Verilog/lista_4/mealey/mealey.v Line: 47
-Warning (10230): Verilog HDL assignment warning at mealey.v(89): truncated value with size 32 to match size of target (4) File: /home/aluno/Documentos/LAB_CD/Verilog/lista_4/mealey/mealey.v Line: 89
-Warning (10230): Verilog HDL assignment warning at mealey.v(97): truncated value with size 32 to match size of target (4) File: /home/aluno/Documentos/LAB_CD/Verilog/lista_4/mealey/mealey.v Line: 97
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 92 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 12 output pins
-    Info (21061): Implemented 76 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 438 megabytes
-    Info: Processing ended: Fri Nov 24 23:11:29 2023
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:22
+Warning (10230): Verilog HDL assignment warning at mealey.v(25): truncated value with size 32 to match size of target (26) File: /home/gabriel/Documents/Unifesp/LAB_CD/Verilog/lista_4/mealey/mealey.v Line: 25
+Warning (10240): Verilog HDL Always Construct warning at mealey.v(30): inferring latch(es) for variable "stash", which holds its previous value in one or more paths through the always construct File: /home/gabriel/Documents/Unifesp/LAB_CD/Verilog/lista_4/mealey/mealey.v Line: 30
+Warning (10240): Verilog HDL Always Construct warning at mealey.v(30): inferring latch(es) for variable "segments", which holds its previous value in one or more paths through the always construct File: /home/gabriel/Documents/Unifesp/LAB_CD/Verilog/lista_4/mealey/mealey.v Line: 30
+Info (10041): Inferred latch for "segments[0]" at mealey.v(48) File: /home/gabriel/Documents/Unifesp/LAB_CD/Verilog/lista_4/mealey/mealey.v Line: 48
+Info (10041): Inferred latch for "segments[1]" at mealey.v(48) File: /home/gabriel/Documents/Unifesp/LAB_CD/Verilog/lista_4/mealey/mealey.v Line: 48
+Info (10041): Inferred latch for "segments[2]" at mealey.v(48) File: /home/gabriel/Documents/Unifesp/LAB_CD/Verilog/lista_4/mealey/mealey.v Line: 48
+Info (10041): Inferred latch for "segments[3]" at mealey.v(48) File: /home/gabriel/Documents/Unifesp/LAB_CD/Verilog/lista_4/mealey/mealey.v Line: 48
+Info (10041): Inferred latch for "segments[4]" at mealey.v(48) File: /home/gabriel/Documents/Unifesp/LAB_CD/Verilog/lista_4/mealey/mealey.v Line: 48
+Info (10041): Inferred latch for "segments[5]" at mealey.v(48) File: /home/gabriel/Documents/Unifesp/LAB_CD/Verilog/lista_4/mealey/mealey.v Line: 48
+Info (10041): Inferred latch for "segments[6]" at mealey.v(48) File: /home/gabriel/Documents/Unifesp/LAB_CD/Verilog/lista_4/mealey/mealey.v Line: 48
+Info (10041): Inferred latch for "stash[0]" at mealey.v(48) File: /home/gabriel/Documents/Unifesp/LAB_CD/Verilog/lista_4/mealey/mealey.v Line: 48
+Info (10041): Inferred latch for "stash[1]" at mealey.v(48) File: /home/gabriel/Documents/Unifesp/LAB_CD/Verilog/lista_4/mealey/mealey.v Line: 48
+Info (10041): Inferred latch for "stash[2]" at mealey.v(48) File: /home/gabriel/Documents/Unifesp/LAB_CD/Verilog/lista_4/mealey/mealey.v Line: 48
+Info (10041): Inferred latch for "stash[3]" at mealey.v(48) File: /home/gabriel/Documents/Unifesp/LAB_CD/Verilog/lista_4/mealey/mealey.v Line: 48
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 1154 megabytes
+    Info: Processing ended: Sun Dec 10 19:51:30 2023
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:15
 
 
